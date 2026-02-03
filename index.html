@@ -1,520 +1,468 @@
-<!doctype html>
-<html lang="zh-Hant">
+<!DOCTYPE html>
+<html lang="zh-TW">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>木人艸｜春酒外燴｜不只是吃飯，更是一場感官派對</title>
-  <meta name="description" content="不只是吃飯，更是一場感官派對！打造最有溫度的春酒外燴。從餐點到佈置，一站式策展服務，讓企業與員工在春酒好好被照顧。" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>木人艸 | 派對餐盒報價</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans TC', sans-serif; background-color: #fcfcfc; color: #333; }
+        .pdf-container { background-color: #fff; border: 1.5px solid #000; padding: 25px; position: relative; }
+        .pdf-table { table-layout: fixed; width: 100%; border-collapse: collapse; }
+        .pdf-table th, .pdf-table td { border: 1px solid #000; padding: 8px; font-size: 13px; vertical-align: middle; word-wrap: break-word; }
+        .header-bg { background-color: #fcf4d9; font-weight: bold; }
+        .req::after { content: ' *'; color: #d93025; }
+        .category-header { background-color: #f3f4f6; font-weight: bold; text-align: left; padding-left: 15px; border: 1px solid #000; font-size: 14px; color: #444; }
+        .text-alert { color: #d93025; font-size: 11px; line-height: 1.5; font-weight: 500; }
+        .no-border-input { border: none; width: 100%; background: transparent; outline: none; padding: 4px; }
+        .no-border-input:focus { background-color: #fffef0; }
+        .input-error { background-color: #fff0f0 !important; border: 1px inset #d93025 !important; }
+        input[type="number"] { width: 55px; text-align: center; border: 1px solid #ddd; border-radius: 4px; }
+        
+        .table-responsive { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .img-preview { width: 48px; height: 48px; object-fit: cover; border-radius: 4px; border: 1px solid #eee; cursor: zoom-in; transition: transform 0.2s; }
+        .img-preview:hover { transform: scale(1.1); border-color: #556b2f; }
+        .badge { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 11px; font-weight: bold; margin-bottom: 2px; }
+        .badge-vege { background-color: #e8f5e9; color: #2e7d32; border: 1px solid #c8e6c9; }
+        .badge-meat { background-color: #fff3e0; color: #ef6c00; border: 1px solid #ffe0b2; }
+        .badge-gray { background-color: #f5f5f5; color: #757575; border: 1px solid #e0e0e0; }
+        
+        #lightbox { display: none; position: fixed; z-index: 1000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); align-items: center; justify-content: center; }
+        #lightbox img { max-width: 90%; max-height: 80%; border: 4px solid white; border-radius: 8px; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
 
-  <!-- Tailwind CDN (免建置，快速上線) -->
-  <script src="https://cdn.tailwindcss.com"></script>
+        .spinner { border: 3px solid rgba(255, 255, 255, 0.3); border-radius: 50%; border-top: 3px solid #fff; width: 18px; height: 18px; animation: spin 0.8s linear infinite; display: inline-block; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
-  <!-- Optional: 字體（不強制） -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+        .stage-transition { transition: opacity 0.4s ease, transform 0.4s ease; }
+        .hidden-stage { display: none !important; }
+        .fade-in { animation: fadeIn 0.5s forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-  <style>
-    :root{
-      --bg:#0B0B0F;
-      --card:#12121A;
-      --line:rgba(255,255,255,.12);
-      --text:rgba(255,255,255,.88);
-      --muted:rgba(255,255,255,.66);
-    }
-    body{ font-family:"Noto Sans TC", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Apple Color Emoji","Segoe UI Emoji"; }
-    .glass{ background:rgba(18,18,26,.72); backdrop-filter: blur(10px); border:1px solid var(--line); }
-    .soft-shadow{ box-shadow: 0 18px 60px rgba(0,0,0,.45); }
-    .ringline{ outline: 1px solid rgba(255,255,255,.10); outline-offset: 0; }
-    .grad{
-      background:
-        radial-gradient(900px 500px at 20% 10%, rgba(255,196,0,.18), transparent 60%),
-        radial-gradient(800px 420px at 80% 15%, rgba(255,94,0,.18), transparent 62%),
-        radial-gradient(900px 520px at 55% 90%, rgba(255,0,128,.14), transparent 60%),
-        linear-gradient(180deg, #06060A 0%, #0B0B0F 55%, #06060A 100%);
-    }
-    .badge{ border:1px solid rgba(255,255,255,.14); }
-    .btn{
-      transition: transform .18s ease, box-shadow .18s ease, opacity .18s ease;
-    }
-    .btn:hover{ transform: translateY(-2px); box-shadow: 0 18px 45px rgba(0,0,0,.35); }
-    .input{
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.12);
-      color: rgba(255,255,255,.9);
-      outline: none;
-    }
-    .input:focus{
-      border-color: rgba(255,255,255,.28);
-      box-shadow: 0 0 0 4px rgba(255,255,255,.06);
-    }
-    .divider{ height:1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent); }
-  </style>
+        input[type="time"] { font-family: Arial, sans-serif !important; }
+        input[type="time"]::-webkit-datetime-edit-fields-wrapper,
+        input[type="time"]::-webkit-datetime-edit-ampm-field,
+        input[type="time"]::-webkit-datetime-edit-hour-field,
+        input[type="time"]::-webkit-datetime-edit-minute-field,
+        input[type="time"]::-webkit-datetime-edit-text {
+            font-family: Arial, sans-serif !important;
+            appearance: none; -webkit-appearance: none;
+        }
+        input[type="time"]::-webkit-datetime-edit-ampm-field:focus {
+            background-color: #556b2f; color: #fff; border-radius: 2px;
+        }
+
+        @media print {
+            body { background-color: #fff !important; padding: 0 !important; margin: 0 !important; }
+            .no-print, button, #next-stage-btn, .mb-4.no-print { display: none !important; }
+            .hidden-stage { display: block !important; opacity: 1 !important; transform: none !important; }
+            #stage-1-section, #stage-2-section { display: block !important; }
+            .pdf-container { border: none !important; box-shadow: none !important; padding: 0 !important; margin: 0 !important; width: 100% !important; max-width: none !important; }
+            tr { page-break-inside: avoid; }
+            .header-bg { background-color: #fcf4d9 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .category-header { background-color: #f3f4f6 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .badge-vege { background-color: #e8f5e9 !important; -webkit-print-color-adjust: exact; }
+            .badge-meat { background-color: #fff3e0 !important; -webkit-print-color-adjust: exact; }
+            .badge-gray { background-color: #f5f5f5 !important; -webkit-print-color-adjust: exact; }
+            .text-blue-800 { color: #1e40af !important; -webkit-print-color-adjust: exact; }
+            .text-red-600 { color: #dc2626 !important; -webkit-print-color-adjust: exact; }
+            input, select { background: transparent !important; appearance: none; -webkit-appearance: none; border: none !important; color: #000 !important; }
+            input::placeholder { color: transparent !important; }
+            .img-preview { width: 60px !important; height: 60px !important; border: 1px solid #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .pdf-table th, .pdf-table td { border: 1px solid #000 !important; }
+            input[type="time"] { font-family: Arial, sans-serif !important; -webkit-print-color-adjust: exact; }
+        }
+    </style>
 </head>
+<body class="p-4 md:p-10">
 
-<body class="grad text-white">
-  <!-- Top bar -->
-  <header class="sticky top-0 z-40">
-    <div class="glass">
-      <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-        <a href="#top" class="flex items-center gap-2">
-          <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white/10 ringline">木</span>
-          <div class="leading-tight">
-            <div class="font-semibold tracking-wide">木人艸 春酒外燴</div>
-            <div class="text-xs text-white/60">Warm • Curated • Memorable</div>
-          </div>
-        </a>
-
-        <nav class="hidden md:flex items-center gap-5 text-sm text-white/75">
-          <a class="hover:text-white" href="#highlights">服務亮點</a>
-          <a class="hover:text-white" href="#process">流程</a>
-          <a class="hover:text-white" href="#packages">方案</a>
-          <a class="hover:text-white" href="#faq">FAQ</a>
-        </nav>
-
-        <div class="flex items-center gap-2">
-          <a href="#form" class="btn inline-flex items-center justify-center rounded-xl bg-white text-black px-4 py-2 text-sm font-semibold">
-            立即詢價
-          </a>
-        </div>
-      </div>
+    <div id="lightbox" onclick="this.style.display='none'" class="no-print">
+        <img id="lightbox-img" src="" alt="餐點大圖">
+        <p class="absolute bottom-10 text-white text-sm font-light">點擊空白處關閉</p>
     </div>
-  </header>
 
-  <!-- Hero -->
-  <main id="top">
-    <section class="mx-auto max-w-6xl px-4 pt-10 pb-10 md:pt-16 md:pb-14">
-      <div class="grid md:grid-cols-12 gap-6 items-stretch">
-        <div class="md:col-span-7">
-          <div class="inline-flex items-center gap-2 rounded-full badge px-3 py-1 text-xs text-white/70">
-            <span class="h-2 w-2 rounded-full bg-emerald-400/90"></span>
-            春酒季檔期｜企業聚會｜空間佈置＋餐飲整合
-          </div>
-
-          <h1 class="mt-4 text-3xl md:text-5xl font-bold tracking-tight leading-[1.08]">
-            不只是吃飯，<br class="hidden md:block" />
-            更是一場感官派對！
-          </h1>
-
-          <p class="mt-4 text-white/75 text-base md:text-lg leading-relaxed">
-            打造最有溫度的春酒外燴。<br class="hidden md:block" />
-            我們深知，一場好的春酒不該只是填飽肚子，更是企業與員工之間，
-            一次最溫柔的對話與慰勞——讓每個人都感覺：今天真的被好好照顧。
-          </p>
-
-          <div class="mt-6 flex flex-col sm:flex-row gap-3">
-            <a href="#form" class="btn inline-flex items-center justify-center rounded-2xl bg-white text-black px-6 py-3 font-semibold">
-              30 秒快速詢價
-            </a>
-            <a href="#highlights" class="btn inline-flex items-center justify-center rounded-2xl bg-white/10 px-6 py-3 font-semibold ringline">
-              看看怎麼做出「有溫度」
-            </a>
-          </div>
-
-          <div class="mt-6 grid grid-cols-3 gap-3 max-w-xl">
-            <div class="glass rounded-2xl p-4">
-              <div class="text-sm font-semibold">一站式整合</div>
-              <div class="text-xs text-white/60 mt-1">餐點 × 佈置 × 現場</div>
+    <div id="quotation-content" class="max-w-[1100px] mx-auto pdf-container shadow-2xl mb-10">
+        <div class="flex justify-between items-start mb-6 border-b-2 border-black pb-4">
+            <div class="text-sm">
+                <h1 class="text-3xl font-bold tracking-tighter mb-1">木人艸</h1>
+                <p>電話：02-2883-2113</p>
+                <p>地址：台北市士林區後港街185號4樓</p>
             </div>
-            <div class="glass rounded-2xl p-4">
-              <div class="text-sm font-semibold">可客製</div>
-              <div class="text-xs text-white/60 mt-1">預算、人數、風格</div>
+            <div class="text-center">
+                <h2 class="text-xl font-bold tracking-widest uppercase">木人艸 Mu Zen Tsao</h2>
+                <p class="text-sm text-gray-600">良農食材．質感會議餐點</p>
             </div>
-            <div class="glass rounded-2xl p-4">
-              <div class="text-sm font-semibold">好拍好分享</div>
-              <div class="text-xs text-white/60 mt-1">氛圍感＋照片出片</div>
-            </div>
-          </div>
+            <div class="text-right text-xs text-gray-400"><p>2026/01 版</p></div>
         </div>
 
-        <!-- Right visual card -->
-        <div class="md:col-span-5">
-          <div class="glass soft-shadow rounded-3xl p-5 md:p-6 h-full">
-            <div class="flex items-center justify-between">
-              <div>
-                <div class="text-sm text-white/60">春酒感官派對｜重點清單</div>
-                <div class="text-lg font-semibold mt-1">你要的，我們都做成「現場感」</div>
-              </div>
-              <div class="hidden md:block text-xs text-white/50">2026 春酒季</div>
-            </div>
-
-            <div class="divider my-5"></div>
-
-            <ul class="space-y-3 text-sm text-white/78">
-              <li class="flex gap-3">
-                <span class="mt-1 h-2.5 w-2.5 rounded-full bg-amber-300"></span>
-                <div><b class="text-white">佈置策展</b>：桌面層次、主視覺點、動線與拍照點</div>
-              </li>
-              <li class="flex gap-3">
-                <span class="mt-1 h-2.5 w-2.5 rounded-full bg-orange-300"></span>
-                <div><b class="text-white">餐點節奏</b>：前菜→主餐→甜點，吃起來有故事</div>
-              </li>
-              <li class="flex gap-3">
-                <span class="mt-1 h-2.5 w-2.5 rounded-full bg-pink-300"></span>
-                <div><b class="text-white">現場服務</b>：補盤、清潔、動線協助，讓你不用忙</div>
-              </li>
-              <li class="flex gap-3">
-                <span class="mt-1 h-2.5 w-2.5 rounded-full bg-emerald-300"></span>
-                <div><b class="text-white">透明報價</b>：依預算做最好的配置，不亂加項</div>
-              </li>
-            </ul>
-
-            <div class="mt-6 grid grid-cols-2 gap-3">
-              <a href="#packages" class="btn rounded-2xl bg-white/10 ringline px-4 py-3 text-center text-sm font-semibold">
-                看方案範例
-              </a>
-              <a href="#form" class="btn rounded-2xl bg-white text-black px-4 py-3 text-center text-sm font-semibold">
-                直接報價
-              </a>
+        <div id="stage-1-section" class="stage-transition">
+            <div class="table-responsive mb-8">
+                <table class="w-full pdf-table" id="customer-info-table">
+                    <tr id="row-0-header">
+                        <td class="header-bg w-24">派單日期</td>
+                        <td colspan="3"><input type="text" id="order-date" class="no-border-input" readonly></td>
+                        <td class="header-bg w-24">訂單編號</td>
+                        <td colspan="3" class="font-mono font-bold text-blue-800" id="order-id">產生中...</td>
+                    </tr>
+                    <tr id="row-1-delivery">
+                        <td class="header-bg req">送餐日期</td>
+                        <td colspan="3" class="text-center font-bold">
+                            <div class="flex flex-col md:flex-row items-center justify-center gap-2">
+                                <input type="date" id="delivery-date" class="no-border-input text-center font-bold w-full md:w-auto" required>
+                                <span class="hidden md:inline text-gray-300">|</span>
+                                <input type="time" id="delivery-time" class="no-border-input text-center font-bold w-full md:w-auto" value="12:00" required>
+                            </div>
+                        </td>
+                        <td colspan="4" class="text-alert">
+                            ● 5 個工作天前預訂（不接 7 日內訂單）<br>
+                            ● 09:00 前開餐需加收加班費<br>
+                            ● 18:00 後撤場費用另議
+                        </td>
+                    </tr>
+                    <tr id="row-2-contact">
+                        <td class="header-bg req">聯絡人</td><td colspan="3"><input type="text" id="contact-name" class="no-border-input" placeholder="聯絡姓名" required></td>
+                        <td class="header-bg w-20 req">公司名稱</td><td colspan="3"><input type="text" id="company-name" class="no-border-input" placeholder="發票抬頭" required></td>
+                    </tr>
+                    <tr id="row-activity-tax">
+                        <td class="header-bg">活動模式</td>
+                        <td class="font-bold px-2" colspan="3">派對餐盒<input type="hidden" id="activity-mode" value="派對餐盒"></td>
+                        <td class="header-bg w-20 req">公司統編</td><td colspan="3"><input type="text" id="tax-id" class="no-border-input" placeholder="8碼數字" required maxlength="8"></td>
+                    </tr>
+                    <tr id="row-4-guest">
+                        <td class="header-bg req">用餐人數</td><td class="text-center" colspan="3"><input type="number" id="guest-count" class="no-border-input text-center font-bold" value="100" oninput="calculateTotal()" required min="1"> 人</td>
+                        <td class="header-bg w-20 req">手機號碼</td><td colspan="3"><input type="text" id="phone-number" class="no-border-input" placeholder="09XX-XXX-XXX" required></td>
+                    </tr>
+                    <tr id="row-5-address">
+                        <td class="header-bg req">送餐地址</td><td colspan="5"><input type="text" id="delivery-address" placeholder="完整收件地址" class="no-border-input" required></td>
+                        <td class="header-bg w-20 req">樓層</td><td><input type="text" id="floor" class="no-border-input text-center" placeholder="F" oninput="calculateTotal()" required></td>
+                    </tr>
+                    <tr id="row-6-remarks">
+                        <td class="header-bg">備註需求</td>
+                        <td colspan="7" class="bg-white">
+                            <input type="text" id="venue-remarks" placeholder="如有特殊需求請備註" class="no-border-input">
+                        </td>
+                    </tr>
+                    <tr id="row-7-parking">
+                        <td class="header-bg req">卸貨車位</td>
+                        <td colspan="7">
+                            <div class="flex items-center gap-6 px-2 py-1" id="parking-container">
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="parking" value="yes"> 有停車場</label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="parking" value="no"> 無停車場</label>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
             </div>
 
-            <p class="mt-4 text-xs text-white/55">
-              ※ 可依「人數 / 場地型態 / 是否含佈置」客製組合，讓預算更有效。
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Highlights -->
-    <section id="highlights" class="mx-auto max-w-6xl px-4 py-10 md:py-14">
-      <div class="flex items-end justify-between gap-4">
-        <div>
-          <h2 class="text-2xl md:text-3xl font-bold">服務亮點</h2>
-          <p class="text-white/70 mt-2">把春酒做成一場「被照顧」的體驗，而不是一個流程。</p>
-        </div>
-      </div>
-
-      <div class="mt-6 grid md:grid-cols-3 gap-4">
-        <div class="glass rounded-3xl p-6">
-          <div class="text-sm text-white/60">01</div>
-          <div class="mt-2 font-semibold text-lg">有溫度的策展佈置</div>
-          <p class="mt-2 text-sm text-white/70 leading-relaxed">
-            不只擺盤，是整體氛圍：主視覺點、桌面層次、拍照角度與動線，一次到位。
-          </p>
-        </div>
-        <div class="glass rounded-3xl p-6">
-          <div class="text-sm text-white/60">02</div>
-          <div class="mt-2 font-semibold text-lg">依預算設計菜單</div>
-          <p class="mt-2 text-sm text-white/70 leading-relaxed">
-            以「吃得滿足＋看得漂亮」為原則調配比例，讓每一分預算都花在體感上。
-          </p>
-        </div>
-        <div class="glass rounded-3xl p-6">
-          <div class="text-sm text-white/60">03</div>
-          <div class="mt-2 font-semibold text-lg">現場交給我們，你只要當主人</div>
-          <p class="mt-2 text-sm text-white/70 leading-relaxed">
-            補盤、整桌、清潔、協助動線，讓你能真正加入聚會，而不是一直在救火。
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Process -->
-    <section id="process" class="mx-auto max-w-6xl px-4 py-10 md:py-14">
-      <div class="glass rounded-3xl p-6 md:p-8">
-        <h2 class="text-2xl md:text-3xl font-bold">合作流程</h2>
-        <p class="text-white/70 mt-2">清楚的節點，讓你安心掌握進度與成果。</p>
-
-        <div class="mt-6 grid md:grid-cols-4 gap-4">
-          <div class="rounded-2xl bg-white/5 ringline p-5">
-            <div class="text-xs text-white/60">STEP 1</div>
-            <div class="mt-2 font-semibold">快速了解需求</div>
-            <div class="mt-2 text-sm text-white/70">人數、預算、場地型態、活動氛圍</div>
-          </div>
-          <div class="rounded-2xl bg-white/5 ringline p-5">
-            <div class="text-xs text-white/60">STEP 2</div>
-            <div class="mt-2 font-semibold">提案與報價</div>
-            <div class="mt-2 text-sm text-white/70">菜單建議＋佈置方向＋費用清單</div>
-          </div>
-          <div class="rounded-2xl bg-white/5 ringline p-5">
-            <div class="text-xs text-white/60">STEP 3</div>
-            <div class="mt-2 font-semibold">確認細節</div>
-            <div class="mt-2 text-sm text-white/70">動線、時間表、進撤場、現場需求</div>
-          </div>
-          <div class="rounded-2xl bg-white/5 ringline p-5">
-            <div class="text-xs text-white/60">STEP 4</div>
-            <div class="mt-2 font-semibold">現場執行</div>
-            <div class="mt-2 text-sm text-white/70">準時進場、完成佈置、餐期服務</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Packages -->
-    <section id="packages" class="mx-auto max-w-6xl px-4 py-10 md:py-14">
-      <h2 class="text-2xl md:text-3xl font-bold">方案範例</h2>
-      <p class="text-white/70 mt-2">以下是常見方向（實際依你預算與人數客製）。</p>
-
-      <div class="mt-6 grid md:grid-cols-3 gap-4">
-        <div class="glass rounded-3xl p-6">
-          <div class="inline-flex rounded-full badge px-3 py-1 text-xs text-white/70">輕量氛圍</div>
-          <div class="mt-3 text-xl font-bold">Warm Start</div>
-          <p class="mt-2 text-sm text-white/70">適合：小型部門春酒 / 會議室聚會</p>
-          <ul class="mt-4 space-y-2 text-sm text-white/75">
-            <li>• 精緻餐點配置（鹹食＋甜點）</li>
-            <li>• 桌面層次與主視覺點</li>
-            <li>• 現場簡易補盤協助</li>
-          </ul>
-          <a href="#form" class="btn mt-6 block rounded-2xl bg-white/10 ringline px-4 py-3 text-center font-semibold">
-            用這方向詢價
-          </a>
+            <div class="flex justify-center py-6 no-print">
+                <button onclick="nextToStage2()" id="next-stage-btn" class="bg-blue-600 text-white px-10 py-3 rounded-lg font-bold hover:bg-blue-700 transition shadow-lg flex items-center gap-3">
+                    <span id="next-btn-text">下一步：選餐點</span>
+                    <span id="next-spinner" class="hidden spinner"></span>
+                </button>
+            </div>
         </div>
 
-        <div class="glass rounded-3xl p-6 ringline">
-          <div class="inline-flex rounded-full bg-white text-black px-3 py-1 text-xs font-semibold">最受歡迎</div>
-          <div class="mt-3 text-xl font-bold">Sense Party</div>
-          <p class="mt-2 text-sm text-white/70">適合：公司春酒 / 需要「出片」的場合</p>
-          <ul class="mt-4 space-y-2 text-sm text-white/75">
-            <li>• 餐點節奏完整（前菜→主餐→甜點）</li>
-            <li>• 明確拍照點與佈置焦點</li>
-            <li>• 現場服務：補盤、整桌、清潔</li>
-          </ul>
-          <a href="#form" class="btn mt-6 block rounded-2xl bg-white text-black px-4 py-3 text-center font-semibold">
-            直接請你報價
-          </a>
-        </div>
+        <div id="stage-2-section" class="stage-transition hidden-stage">
+            <div class="mb-4 no-print">
+                <button onclick="backToStage1()" class="text-blue-600 font-medium flex items-center gap-1 hover:underline">
+                    ← 回上一步
+                </button>
+            </div>
 
-        <div class="glass rounded-3xl p-6">
-          <div class="inline-flex rounded-full badge px-3 py-1 text-xs text-white/70">高規策展</div>
-          <div class="mt-3 text-xl font-bold">Signature Curated</div>
-          <p class="mt-2 text-sm text-white/70">適合：品牌春酒 / 需要強主題與舞台感</p>
-          <ul class="mt-4 space-y-2 text-sm text-white/75">
-            <li>• 主題化佈置與空間策展</li>
-            <li>• 甜點/飲品區重點設計</li>
-            <li>• 全程現場執行與控場</li>
-          </ul>
-          <a href="#form" class="btn mt-6 block rounded-2xl bg-white/10 ringline px-4 py-3 text-center font-semibold">
-            我想做高規
-          </a>
-        </div>
-      </div>
-    </section>
+            <h3 class="text-center font-bold mb-3 tracking-widest border-b border-black pb-1 uppercase">餐點清單</h3>
+            
+            <div class="table-responsive mb-8">
+                <table class="w-full pdf-table">
+                    <thead>
+                        <tr class="header-bg text-center text-xs">
+                            <th class="w-16">示意圖</th>
+                            <th>餐點名稱</th>
+                            <th class="w-48">規格</th>
+                            <th class="w-16">數量</th>
+                            <th class="w-24">單價</th>
+                            <th class="w-24">小計</th>
+                            <th class="w-32">標籤</th>
+                        </tr>
+                    </thead>
+                    <tbody id="menu-appetizer"><tr><td colspan="7" class="category-header">● 小食系列 Appetizers</td></tr></tbody>
+                    <tbody id="menu-dessert"><tr><td colspan="7" class="category-header">● 精緻甜點 Desserts</td></tr></tbody>
+                    <tbody id="menu-beverage"><tr><td colspan="7" class="category-header">● 質感飲品 Beverages</td></tr></tbody>
+                </table>
+            </div>
+            <h3 class="text-center font-bold mb-3 tracking-widest border-b border-black pb-1 uppercase">服務項目</h3>
+            <div class="table-responsive mb-8">
+                <table class="w-full pdf-table">
+                    <thead><tr class="header-bg text-center text-xs"><th>服務內容</th><th>規格說明</th><th>小計</th><th>備註</th></tr></thead>
+                    <tbody id="service-detail-body">
+                        <tr id="row-prop-rental"><td class="text-center">佈置道具租賃</td><td><select id="prop-rental" class="no-border-input font-bold" onchange="calculateTotal()"><option value="no">無租賃需求</option><option value="yes">租賃道具 (滿 $6,000)</option></select></td><td class="text-center">免費商借</td><td class="text-xs">當日歸還</td></tr>
+                        <tr id="row-transport-fee"><td class="text-center font-medium">物流費用</td><td id="transport-desc">自動判定</td><td class="text-right font-bold" id="val-transport">$500</td><td class="text-xs text-blue-600 font-medium" id="transport-logic">單程配送</td></tr>
+                        <tr id="manual-stairs-row">
+                            <td class="text-center font-medium text-orange-700">人工爬梯</td>
+                            <td>
+                                <div class="flex items-center gap-2">
+                                    <select id="stair-count" class="no-border-input font-bold w-20 text-orange-700" onchange="calculateTotal()">
+                                        <option value="0">無</option><option value="1">1 層</option><option value="2">2 層</option><option value="3">3 層</option><option value="4">4 層</option>
+                                    </select>
+                                    <span class="text-[10px] text-gray-400 font-normal">($3,500/層)</span>
+                                </div>
+                            </td>
+                            <td class="text-right font-bold text-orange-600" id="val-stair">$0</td>
+                            <td class="text-xs">按層計費</td>
+                        </tr>
+                        <tr id="row-utensils"><td class="text-center font-medium">餐具組</td><td class="flex justify-between items-center italic text-gray-500"><span>環保免洗餐具</span><span id="utensil-info">100 組</span></td><td class="text-center text-gray-400">贈送</td><td class="text-xs">依人數</td></tr>
+                    </tbody>
+                </table>
+            </div>
 
-    <!-- Gallery (placeholders) -->
-    <section class="mx-auto max-w-6xl px-4 py-10 md:py-14">
-      <div class="flex items-end justify-between">
-        <div>
-          <h2 class="text-2xl md:text-3xl font-bold">氛圍作品區</h2>
-          <p class="text-white/70 mt-2">把你們的春酒變成一張張「值得被收藏」的照片。</p>
-        </div>
-        <div class="hidden md:block text-sm text-white/55">（可替換成你的實拍圖）</div>
-      </div>
-
-      <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-3">
-        <div class="aspect-[4/5] rounded-2xl bg-white/5 ringline"></div>
-        <div class="aspect-[4/5] rounded-2xl bg-white/5 ringline"></div>
-        <div class="aspect-[4/5] rounded-2xl bg-white/5 ringline"></div>
-        <div class="aspect-[4/5] rounded-2xl bg-white/5 ringline"></div>
-      </div>
-
-      <p class="mt-3 text-xs text-white/55">
-        小提醒：圖片建議用直式 4:5（1080×1350）或 3:4（1200×1600），整體會更有質感。
-      </p>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="mx-auto max-w-6xl px-4 py-10 md:py-14">
-      <div class="glass rounded-3xl p-6 md:p-8">
-        <h2 class="text-2xl md:text-3xl font-bold">FAQ</h2>
-
-        <div class="mt-6 grid md:grid-cols-2 gap-4">
-          <details class="rounded-2xl bg-white/5 ringline p-5">
-            <summary class="cursor-pointer font-semibold">預算不高也能做出氛圍嗎？</summary>
-            <p class="mt-2 text-sm text-white/70 leading-relaxed">
-              可以。我們會把預算集中在「視覺焦點＋吃起來的滿足感」，用最少的佈置做出最強體感。
-            </p>
-          </details>
-          <details class="rounded-2xl bg-white/5 ringline p-5">
-            <summary class="cursor-pointer font-semibold">可以只要餐點，不含佈置嗎？</summary>
-            <p class="mt-2 text-sm text-white/70 leading-relaxed">
-              可以。你也可以選「輕佈置」：只做桌面層次與主視覺點，成本更好控。
-            </p>
-          </details>
-          <details class="rounded-2xl bg-white/5 ringline p-5">
-            <summary class="cursor-pointer font-semibold">需要提前多久預訂？</summary>
-            <p class="mt-2 text-sm text-white/70 leading-relaxed">
-              春酒旺季建議越早越好（場地與檔期會搶）。若你已確定日期，直接填表最快。
-            </p>
-          </details>
-          <details class="rounded-2xl bg-white/5 ringline p-5">
-            <summary class="cursor-pointer font-semibold">可以支援公司大樓/辦公室場地嗎？</summary>
-            <p class="mt-2 text-sm text-white/70 leading-relaxed">
-              可以。我們會特別評估電梯、動線、備餐區、垃圾回收點與進撤場時間，確保不影響辦公。
-            </p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- Form -->
-    <section id="form" class="mx-auto max-w-6xl px-4 pb-16 md:pb-20">
-      <div class="grid md:grid-cols-12 gap-6 items-start">
-        <div class="md:col-span-5">
-          <h2 class="text-2xl md:text-3xl font-bold">30 秒快速詢價</h2>
-          <p class="text-white/70 mt-2 leading-relaxed">
-            留下基本資訊，我們會用最短時間回覆你：<br/>
-            「怎麼用你的預算，做出最有溫度的春酒。」
-          </p>
-
-          <div class="mt-6 glass rounded-3xl p-6">
-            <div class="text-sm font-semibold">你會收到什麼？</div>
-            <ul class="mt-3 space-y-2 text-sm text-white/75">
-              <li>• 初步方案方向（餐點＋佈置建議）</li>
-              <li>• 透明報價區間（依人數與需求）</li>
-              <li>• 需要現勘/動線評估也可安排</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="md:col-span-7">
-          <div class="glass rounded-3xl p-6 md:p-8 soft-shadow">
-            <!-- ✅ 方式A：Formspree（把 action 換成你的） -->
-            <!-- <form id="inquiryForm" action="https://formspree.io/f/XXXXYYYY" method="POST" class="space-y-4"> -->
-
-            <!-- ✅ 方式B：用 JS fetch 打到你的 GAS Web App（見下方第2段） -->
-            <form id="inquiryForm" class="space-y-4">
-
-              <div class="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label class="text-sm text-white/70">姓名 *</label>
-                  <input class="input mt-2 w-full rounded-2xl px-4 py-3" name="name" required placeholder="例如：王小明" />
+            <div class="flex flex-col md:flex-row justify-between gap-8 mt-10">
+                <div class="flex-1 text-xs border p-4 border-black bg-gray-50 leading-relaxed">
+                    <p class="font-bold underline text-sm mb-3 uppercase tracking-wider">訂購須知</p>
+                    <div class="space-y-2" id="order-notice-container">
+                        <p class="text-red-700 font-bold">1. 出餐前 5 個工作天預訂。</p>
+                        <p>2. 餐會兩週前支付 70% 定金。</p>
+                        <p class="text-orange-700 font-medium">3. 爬梯搬運費 $3,500/層。</p>
+                        <div class="pt-2 border-t border-gray-300">
+                            <p class="text-amber-700 font-bold">品質建議：2 小時內食用完畢，確保風味最佳。</p>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                  <label class="text-sm text-white/70">電話 *</label>
-                  <input class="input mt-2 w-full rounded-2xl px-4 py-3" name="phone" required placeholder="例如：0912-345-678" />
+                <div class="w-full md:w-96">
+                    <table class="w-full pdf-table">
+                        <tr id="food-total-row"><td class="header-bg w-32">餐點小計</td><td class="text-right font-bold" id="food-total">$0</td></tr>
+                        <tr><td class="header-bg">服務小計</td><td class="text-right font-bold" id="service-total">$500</td></tr>
+                        <tr><td class="header-bg">營業稅 (5%)</td><td class="text-right font-bold" id="tax-total">$0</td></tr>
+                        <tr class="text-xl"><td class="header-bg text-red-700">總計 (含稅)</td><td class="text-right font-bold text-red-600" id="grand-total">$0</td></tr>
+                        <tr class="text-sm"><td class="header-bg">預付定金 (70%)</td><td class="text-right font-bold text-gray-700" id="deposit-total">$0</td></tr>
+                    </table>
                 </div>
-              </div>
+            </div>
 
-              <div class="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label class="text-sm text-white/70">預算 *</label>
-                  <select class="input mt-2 w-full rounded-2xl px-4 py-3" name="budget" required>
-                    <option value="" selected disabled>請選擇</option>
-                    <option>3萬以下</option>
-                    <option>3–6萬</option>
-                    <option>6–10萬</option>
-                    <option>10–20萬</option>
-                    <option>20萬以上</option>
-                    <option>尚未確定，想先聊聊</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label class="text-sm text-white/70">活動類型 *</label>
-                  <select class="input mt-2 w-full rounded-2xl px-4 py-3" name="eventType" required>
-                    <option value="" selected disabled>請選擇</option>
-                    <option>公司春酒（辦公室/會議室）</option>
-                    <option>公司春酒（餐廳/場地）</option>
-                    <option>部門聚會/Team Building</option>
-                    <option>尾牙/春酒（含舞台/活動）</option>
-                    <option>其他（備註說明）</option>
-                  </select>
-                </div>
-              </div>
-
-              <div>
-                <label class="text-sm text-white/70">備註</label>
-                <textarea class="input mt-2 w-full rounded-2xl px-4 py-3 min-h-[120px]" name="note"
-                  placeholder="可填：日期/人數/地點/是否需要佈置、是否有素食/過敏、想要的氛圍（溫柔/派對/高級感）"></textarea>
-              </div>
-
-              <!-- 追蹤欄位（可用於來源分析） -->
-              <input type="hidden" name="page" value="spring-banquet-landing" />
-              <input type="hidden" name="utm_source" id="utm_source" />
-              <input type="hidden" name="utm_medium" id="utm_medium" />
-              <input type="hidden" name="utm_campaign" id="utm_campaign" />
-
-              <button id="submitBtn" type="submit"
-                class="btn w-full rounded-2xl bg-white text-black px-4 py-3 font-semibold">
-                送出詢價（寄到 admin_1@muzentsao.com）
-              </button>
-
-              <p id="formMsg" class="text-sm text-white/70 hidden"></p>
-              <p class="text-xs text-white/50">
-                送出即表示同意我們僅用於聯絡回覆，不做其他用途。
-              </p>
-            </form>
-          </div>
+            <div class="mt-12 flex flex-col items-center gap-4 no-print">
+                <button id="main-submit-btn" onclick="processOrder()" class="bg-black text-white px-12 py-4 rounded-full font-bold hover:bg-gray-800 transition shadow-xl flex items-center gap-3">
+                    <span id="btn-text">立即詢價 (預覽報價單)</span>
+                    <span id="btn-spinner" class="hidden spinner"></span>
+                </button>
+                <p class="text-xs text-gray-400 font-medium text-center">
+                    ※ 此為模擬報價。請聯絡 Line 客服，經專人確認後提供正式訂單。
+                </p>
+            </div>
         </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Mobile Sticky CTA -->
-  <div class="md:hidden fixed bottom-3 left-0 right-0 z-50 px-4">
-    <a href="#form" class="btn block rounded-2xl bg-white text-black text-center py-3 font-semibold soft-shadow">
-      立即詢價
-    </a>
-  </div>
-
-  <footer class="mx-auto max-w-6xl px-4 pb-10 text-white/55 text-xs">
-    <div class="divider mb-6"></div>
-    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-      <div>© 木人艸 春酒外燴｜不只是吃飯，更是一場感官派對</div>
-      <div>表單通知信箱：admin_1@muzentsao.com</div>
     </div>
-  </footer>
 
-  <script>
-    // 讀取 UTM 參數
-    const params = new URLSearchParams(location.search);
-    ["utm_source","utm_medium","utm_campaign"].forEach(k=>{
-      const el = document.getElementById(k);
-      if (el) el.value = params.get(k) || "";
-    });
+    <script>
+        const BLACKLIST = { names: ["測試", "test", "123"], phones: ["0912345678", "0900000000"] };
 
-    // ✅ 方式B：Google Apps Script Web App 送出（把 GAS_URL 換成你的部署網址）
-    const GAS_URL = ""; // 例如：https://script.google.com/macros/s/XXXX/exec
+        function validateTaxId(taxId) {
+            if (!/^\d{8}$/.test(taxId)) return false;
+            const weights = [1, 2, 1, 2, 1, 2, 4, 1];
+            let sum = 0;
+            const calculate = (n) => Math.floor(n / 10) + (n % 10);
+            for (let i = 0; i < 8; i++) sum += calculate(parseInt(taxId[i]) * weights[i]);
+            if (sum % 5 === 0) return true;
+            if (taxId[6] === '7' && (sum + 1) % 5 === 0) return true;
+            return false;
+        }
 
-    const form = document.getElementById("inquiryForm");
-    const btn = document.getElementById("submitBtn");
-    const msg = document.getElementById("formMsg");
+        const products = [
+            {"id": "S01", "cat": "appetizer", "name": "照燒牛迷你堡", "tags": ["牛肉"], "img": "1.照燒風味迷你漢堡(豬肉) (正常).jpg", "specs": [{"label": "中盒 (15入)", "price": 1350}, {"label": "小盒 (9)", "price": 765}]},
+            {"id": "S02", "cat": "appetizer", "name": "照燒雞迷你堡", "tags": ["雞肉"], "img": "2.迷你照燒雞腿漢堡（正常）.jpg", "specs": [{"label": "中盒 (15入)", "price": 1275}, {"label": "小盒 (9)", "price": 765}]},
+            {"id": "S03", "cat": "appetizer", "name": "鹽麴雞墨西哥捲餅", "tags": ["雞肉"], "img": "18.鹽麴雞肉墨西哥捲餅.jpg", "specs": [{"label": "中盒 (22入)", "price": 1650}, {"label": "小盒 (10)", "price": 750}]},
+            {"id": "S04", "cat": "appetizer", "name": "時蔬花生三明治", "tags": ["蛋奶素"], "img": "迷你花生時蔬三明治(蛋奶素)_工作區域 1.jpg", "specs": [{"label": "中盒 (14入)", "price": 560}, {"label": "小盒 (6)", "price": 240}]},
+            {"id": "S05", "cat": "appetizer", "name": "燻雞時蔬三明治", "tags": ["雞肉"], "img": "5.迷你燻雞吐司三明治.jpg", "specs": [{"label": "中盒 (14入)", "price": 560}, {"label": "小盒 (6)", "price": 240}]},
+            {"id": "S08", "cat": "appetizer", "name": "復刻營養三明治", "tags": ["蛋奶素"], "img": "3.復刻版迷你營養三明治.jpg", "specs": [{"label": "小盒 (8)", "price": 480}]},
+            {"id": "S10", "cat": "appetizer", "name": "綜合花壽司 (全素)", "tags": ["全素"], "img": "10.綜合花壽司.jpg", "specs": [{"label": "中盒 (48入)", "price": 960}, {"label": "小盒 (24)", "price": 480}]},
+            {"id": "S11", "cat": "appetizer", "name": "豆皮壽司 (全素)", "tags": ["全素"], "img": "11.豆皮壽司(素).jpg", "specs": [{"label": "中盒 (40入)", "price": 800}, {"label": "小盒 (25)", "price": 500}]},
+            {"id": "S15", "cat": "appetizer", "name": "野菜精緻鹹派", "tags": ["蛋奶素"], "img": "生態野菜鹹派.png", "specs": [{"label": "中盒 (24入)", "price": 1440}, {"label": "小盒 (15)", "price": 900}]},
+            {"id": "S20", "cat": "appetizer", "name": "檸檬酸辣翅小腿", "tags": ["雞肉"], "img": "22.檸檬酸辣翅小腿.jpg", "specs": [{"label": "中盒", "price": 1600}, {"label": "小盒 (30)", "price": 870}]},
+            {"id": "D02", "cat": "dessert", "name": "棉花糖檸檬塔", "tags": ["蛋奶素"], "img": "25.迷你棉花糖酸甜檸檬塔（蛋奶素）.jpg", "specs": [{"label": "中盒 (24入)", "price": 1440}, {"label": "小盒 (16)", "price": 960}]},
+            {"id": "D06", "cat": "dessert", "name": "烏龍茶蛋糕捲", "tags": ["蛋奶素"], "img": "29.烏龍茶生凍蛋糕捲.jpg", "specs": [{"label": "中盒 (30入)", "price": 1500}, {"label": "小盒 (20)", "price": 1000}]},
+            {"id": "D09", "cat": "dessert", "name": "烏龍茶瑪德蓮", "tags": ["蛋奶素"], "img": "32.烏龍茶瑪德蓮（大）.jpg", "specs": [{"label": "中盒 (32入)", "price": 2400}, {"label": "小盒 (16)", "price": 800}]},
+            {"id": "D11", "cat": "dessert", "name": "焦糖海鹽磅蛋糕", "tags": ["蛋奶素"], "img": "37.焦糖海鹽磅蛋糕 (蛋奶素).jpg", "specs": [{"label": "中盒 (49入)", "price": 2450}, {"label": "小盒 (28)", "price": 1400}]},
+            {"id": "D13", "cat": "dessert", "name": "繽紛法式馬卡龍", "tags": ["蛋奶素"], "img": "41.繽紛馬卡龍.jpg", "specs": [{"label": "中盒 (28入)", "price": 840}, {"label": "小盒 (16)", "price": 480}]},
+            {"id": "D15", "cat": "dessert", "name": "日式抹茶蕨餅", "tags": ["蛋奶素"], "img": "43.抹茶蕨餅杯 (全素).jpg", "specs": [{"label": "中盒 (24入)", "price": 1680}, {"label": "小盒 (9)", "price": 630}]},
+            {"id": "B01-T", "cat": "beverage", "name": "有機蜜香紅茶 (桶)", "tags": [""], "img": "飲料桶_工作區域 1.jpg", "specs": [{"label": "8L/桶", "price": 1000}], "requiresCollection": true},
+            {"id": "B01-C", "cat": "beverage", "name": "公平貿易咖啡 (桶)", "tags": [""], "img": "飲料桶_工作區域 1.jpg", "specs": [{"label": "8L/桶", "price": 1500}], "requiresCollection": true},
+        ];
 
-    function setMsg(text, ok=true){
-      msg.classList.remove("hidden");
-      msg.textContent = text;
-      msg.style.opacity = "1";
-      msg.style.color = ok ? "rgba(255,255,255,.82)" : "rgba(255,180,180,.92)";
-    }
+        let cart = {};
 
-    form.addEventListener("submit", async (e) => {
-      // 如果你用 Formspree action，就把下面三行刪掉，讓它走原生 submit 即可。
-      e.preventDefault();
+        function generateOrderID() {
+            const now = new Date();
+            const dateStr = now.getFullYear().toString() + (now.getMonth() + 1).toString().padStart(2, '0') + now.getDate().toString().padStart(2, '0');
+            return `${dateStr}-${Math.floor(Math.random() * 10000).toString().padStart(4, '0')}`;
+        }
 
-      // 沒填 GAS_URL：就先提示你去貼上部署網址（避免誤以為已寄出）
-      if (!GAS_URL) {
-        setMsg("尚未設定表單送出端點（GAS_URL）。請先用下方教學部署 Google Apps Script 或改用 Formspree。", false);
-        return;
-      }
+        function init() {
+            const customerTable = document.getElementById('customer-info-table');
+            const firstRow = document.getElementById('row-0-header');
+            const activityModeValue = document.getElementById('activity-mode').value;
+            firstRow.innerHTML = `
+                <td class="header-bg w-24">模式</td><td class="font-bold px-2 w-32">${activityModeValue}<input type="hidden" id="activity-mode" value="${activityModeValue}"></td>
+                <td class="header-bg w-24">日期</td><td colspan="2"><input type="text" id="order-date" class="no-border-input" readonly></td>
+                <td class="header-bg w-20">單號</td><td colspan="2" class="font-mono font-bold text-blue-800" id="order-id">產出中</td>
+            `;
 
-      btn.disabled = true;
-      btn.textContent = "送出中…";
+            const contactRow = document.getElementById('row-2-contact');
+            contactRow.innerHTML = `<td class="header-bg req">聯絡人</td><td colspan="7"><input type="text" id="contact-name" class="no-border-input" placeholder="姓名" required></td>`;
 
-      const fd = new FormData(form);
-      const payload = Object.fromEntries(fd.entries());
+            const taxRow = document.getElementById('row-activity-tax');
+            taxRow.innerHTML = `
+                <td class="header-bg">統編</td>
+                <td colspan="7">
+                    <div class="flex items-center gap-6 px-2">
+                        <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="tax-toggle" value="no" checked onchange="toggleTaxInput()"> 無</label>
+                        <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="tax-toggle" value="yes" onchange="toggleTaxInput()"> 有</label>
+                        <div id="tax-input-wrapper" class="hidden flex items-center gap-2 border-l pl-4 ml-2">
+                            <input type="text" id="tax-id" class="border-b border-black w-32 text-center font-mono" placeholder="8碼數字" maxlength="8">
+                        </div>
+                    </div>
+                </td>
+            `;
 
-      try {
-        const res = await fetch(GAS_URL, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload),
-        });
+            document.getElementById('row-6-remarks').style.display = 'none';
+            document.getElementById('row-7-parking').style.display = 'none';
 
-        const data = await res.json().catch(()=>({}));
-        if (!res.ok || !data.ok) throw new Error(data.error || "送出失敗");
+            const now = new Date();
+            document.getElementById('order-date').value = `${now.getFullYear()}/${now.getMonth()+1}/${now.getDate()}`;
+            document.getElementById('order-id').innerText = generateOrderID();
+            
+            const minDate = new Date();
+            minDate.setDate(now.getDate() + 7);
+            document.getElementById('delivery-date').min = minDate.toISOString().split("T")[0];
 
-        setMsg("已送出！我們會盡快與你聯絡並提供初步方案與報價。");
-        form.reset();
-        btn.textContent = "已送出 ✔";
-      } catch (err) {
-        console.error(err);
-        setMsg("送出失敗：請稍後再試，或改用 Formspree 方式。", false);
-        btn.textContent = "重新送出";
-      } finally {
-        btn.disabled = false;
-      }
-    });
-  </script>
+            products.forEach(p => {
+                const body = document.getElementById(`menu-${p.cat}`);
+                const tr = document.createElement('tr');
+                tr.id = `row-${p.id}`;
+                let tagsHtml = p.tags.map(tag => `<span class="badge ${['蛋奶素','全素'].includes(tag)?'badge-vege':'badge-meat'}">${tag}</span>`).join(' ');
+                let specOptions = p.specs.map((s, idx) => `<option value="${idx}">${s.label}</option>`).join('');
+                tr.innerHTML = `
+                    <td class="text-center"><img src="${p.img}" class="img-preview" onclick="openLightbox('${p.img}')"></td>
+                    <td class="font-bold">${p.name}</td>
+                    <td><select class="no-border-input bg-gray-50 text-xs rounded" onchange="updateRow('${p.id}', this.value)">${specOptions}</select></td>
+                    <td class="text-center"><input type="number" value="0" min="0" oninput="updateQty('${p.id}', this.value)"></td>
+                    <td class="text-right font-medium" id="price-${p.id}">$${p.specs[0].price.toLocaleString()}</td>
+                    <td class="text-right font-bold text-blue-800" id="sub-${p.id}">$0</td>
+                    <td class="text-xs">${tagsHtml}</td>
+                `;
+                body.appendChild(tr);
+            });
+            
+            injectDeliveryUI();
+            const foodTotalRow = document.getElementById('food-total-row');
+            foodTotalRow.insertAdjacentHTML('afterend', `<tr id="morning-surcharge-row" class="hidden"><td class="header-bg">早晨加成</td><td class="text-right font-bold text-red-600" id="morning-surcharge-total">$0</td></tr>`);
+            document.getElementById('delivery-time').addEventListener('change', calculateTotal);
+            reorderServiceDetails();
+            calculateTotal();
+        }
+
+        function toggleTaxInput() {
+            const hasTax = document.querySelector('input[name="tax-toggle"]:checked').value === 'yes';
+            document.getElementById('tax-input-wrapper').classList.toggle('hidden', !hasTax);
+            document.getElementById('tax-id').required = hasTax;
+        }
+
+        function reorderServiceDetails() {
+            const serviceBody = document.getElementById('service-detail-body');
+            const parkingRow = document.createElement('tr');
+            parkingRow.innerHTML = `<td class="text-center font-medium">卸貨停車場</td><td colspan="2"><div class="flex items-center gap-6 px-2 py-1"><label><input type="radio" name="parking-service" value="yes"> 有</label><label><input type="radio" name="parking-service" value="no" checked> 無</label></div></td><td class="text-xs">物流需求</td>`;
+            serviceBody.appendChild(parkingRow);
+        }
+
+        function injectDeliveryUI() {
+            const stairRow = document.getElementById('manual-stairs-row');
+            const envHtml = `
+                <tr id="delivery-env-row"><td class="text-center font-medium">配送環境</td><td colspan="2"><div class="flex items-center gap-6 px-2"><label><input type="radio" name="delivery-env" value="elevator" checked onchange="calculateTotal()"> 有電梯</label><label><input type="radio" name="delivery-env" value="no-elevator" onchange="calculateTotal()"> 僅樓梯</label></div></td><td class="text-xs">自動計費</td></tr>
+                <tr id="carry-up-row"><td class="text-center font-medium text-blue-700">送上樓服務</td><td><div class="flex items-center gap-2 px-2"><input type="checkbox" id="check-carry-up" onchange="calculateTotal()"><label for="check-carry-up" class="cursor-pointer font-bold">需送上樓 (+$200)</label></div></td><td class="text-right font-bold text-blue-600" id="val-carry-up">$0</td><td class="text-xs" id="carry-up-note">滿額免費</td></tr>
+                <tr id="ramp-row" class="hidden"><td class="text-center font-medium">坡道確認</td><td colspan="2"><div class="flex items-center gap-6 px-2"><label><input type="radio" name="ramp-status" value="yes" checked> 有坡道</label><label><input type="radio" name="ramp-status" value="no"> 無坡道</label></div></td><td class="text-xs">重物需坡道</td></tr>
+            `;
+            stairRow.insertAdjacentHTML('beforebegin', envHtml);
+        }
+
+        function openLightbox(url) { document.getElementById('lightbox-img').src = url; document.getElementById('lightbox').style.display = 'flex'; }
+        function updateRow(id, specIdx) { const p = products.find(i => i.id === id); document.getElementById(`price-${id}`).innerText = `$${p.specs[specIdx].price.toLocaleString()}`; updateQty(id, document.querySelector(`#row-${id} input[type=number]`).value); }
+
+        function updateQty(id, qty) {
+            qty = Math.max(0, parseInt(qty) || 0);
+            const p = products.find(i => i.id === id);
+            const specIdx = document.querySelector(`#row-${id} select`).value;
+            const price = p.specs[specIdx].price;
+            const sub = qty * price;
+            document.getElementById(`sub-${id}`).innerText = `$${sub.toLocaleString()}`;
+            if (qty > 0) cart[id] = { id: p.id, name: p.name, spec: p.specs[specIdx].label, qty, price, sub, requiresCollection: p.requiresCollection || false };
+            else delete cart[id];
+            calculateTotal();
+        }
+
+        function calculateTotal() {
+            let foodSub = Object.values(cart).reduce((a, b) => a + b.sub, 0);
+            document.getElementById('food-total').innerText = `$${foodSub.toLocaleString()}`;
+            const env = document.querySelector('input[name="delivery-env"]:checked').value;
+            const carryUpCheck = document.getElementById('check-carry-up');
+            let carryUpFee = 0, stairFee = 0;
+            if (env === 'elevator') {
+                document.getElementById('manual-stairs-row').classList.add('hidden');
+                document.getElementById('carry-up-row').classList.remove('hidden');
+                if (foodSub >= 15000) { carryUpCheck.checked = true; carryUpCheck.disabled = true; carryUpFee = 0; }
+                else { carryUpCheck.disabled = false; carryUpFee = carryUpCheck.checked ? 200 : 0; }
+            } else {
+                document.getElementById('manual-stairs-row').classList.remove('hidden');
+                document.getElementById('carry-up-row').classList.add('hidden');
+                stairFee = parseInt(document.getElementById('stair-count').value) * 3500;
+            }
+            document.getElementById('val-carry-up').innerText = `$${carryUpFee.toLocaleString()}`;
+            document.getElementById('val-stair').innerText = `$${stairFee.toLocaleString()}`;
+            
+            const deliveryHour = parseInt(document.getElementById('delivery-time').value.split(':')[0]);
+            let morningSurcharge = (deliveryHour < 9) ? (9 - deliveryHour) * 3500 : 0;
+            document.getElementById('morning-surcharge-row').classList.toggle('hidden', morningSurcharge === 0);
+            document.getElementById('morning-surcharge-total').innerText = `$${morningSurcharge.toLocaleString()}`;
+
+            const transportFee = (foodSub >= 20000) ? 1500 : 500;
+            document.getElementById('val-transport').innerText = `$${transportFee.toLocaleString()}`;
+            const serviceSub = transportFee + stairFee + carryUpFee;
+            document.getElementById('service-total').innerText = `$${serviceSub.toLocaleString()}`;
+            const grand = foodSub + serviceSub + morningSurcharge;
+            const tax = Math.round(grand * 0.05);
+            document.getElementById('tax-total').innerText = `$${tax.toLocaleString()}`;
+            document.getElementById('grand-total').innerText = `$${(grand + tax).toLocaleString()}`;
+            document.getElementById('deposit-total').innerText = `$${Math.round((grand + tax) * 0.7).toLocaleString()}`;
+            document.getElementById('utensil-info').innerText = `${document.getElementById('guest-count').value} 組`;
+        }
+
+        async function nextToStage2() {
+            const inputs = ['delivery-date', 'contact-name', 'guest-count', 'phone-number', 'delivery-address'];
+            let valid = true;
+            inputs.forEach(id => {
+                const el = document.getElementById(id);
+                if (!el.value) { el.classList.add('input-error'); valid = false; }
+                else el.classList.remove('input-error');
+            });
+            if (!valid) return alert("請填寫完整基本資料。");
+            document.getElementById('stage-1-section').classList.add('hidden-stage');
+            document.getElementById('stage-2-section').classList.remove('hidden-stage');
+            window.scrollTo(0,0);
+        }
+
+        function backToStage1() {
+            document.getElementById('stage-2-section').classList.add('hidden-stage');
+            document.getElementById('stage-1-section').classList.remove('hidden-stage');
+        }
+
+        async function processOrder() {
+            if (Object.keys(cart).length === 0) return alert("請先選餐。");
+            const btn = document.getElementById('main-submit-btn');
+            btn.disabled = true;
+            document.getElementById('btn-text').innerText = "發送中...";
+            try {
+                window.print();
+                alert("模擬報價單產出完成！請聯繫專員核對。");
+            } finally {
+                btn.disabled = false;
+                document.getElementById('btn-text').innerText = "立即詢價 (預覽報價單)";
+            }
+        }
+        init();
+    </script>
 </body>
 </html>
