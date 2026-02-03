@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>木人艸｜春酒外燴｜不只是吃飯，更是一場感官派對</title>
+  <meta name="description" content="不只是吃飯，更是一場感官派對！打造最有溫度的春酒外燴。從餐點到佈置，一站式策展服務，讓企業與員工在春酒好好被照顧。" />
+
+  <!-- Tailwind CDN (免建置，快速上線) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Optional: 字體（不強制） -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0B0B0F;
+      --card:#12121A;
+      --line:rgba(255,255,255,.12);
+      --text:rgba(255,255,255,.88);
+      --muted:rgba(255,255,255,.66);
+    }
+    body{ font-family:"Noto Sans TC", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Apple Color Emoji","Segoe UI Emoji"; }
+    .glass{ background:rgba(18,18,26,.72); backdrop-filter: blur(10px); border:1px solid var(--line); }
+    .soft-shadow{ box-shadow: 0 18px 60px rgba(0,0,0,.45); }
+    .ringline{ outline: 1px solid rgba(255,255,255,.10); outline-offset: 0; }
+    .grad{
+      background:
+        radial-gradient(900px 500px at 20% 10%, rgba(255,196,0,.18), transparent 60%),
+        radial-gradient(800px 420px at 80% 15%, rgba(255,94,0,.18), transparent 62%),
+        radial-gradient(900px 520px at 55% 90%, rgba(255,0,128,.14), transparent 60%),
+        linear-gradient(180deg, #06060A 0%, #0B0B0F 55%, #06060A 100%);
+    }
+    .badge{ border:1px solid rgba(255,255,255,.14); }
+    .btn{
+      transition: transform .18s ease, box-shadow .18s ease, opacity .18s ease;
+    }
+    .btn:hover{ transform: translateY(-2px); box-shadow: 0 18px 45px rgba(0,0,0,.35); }
+    .input{
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+      color: rgba(255,255,255,.9);
+      outline: none;
+    }
+    .input:focus{
+      border-color: rgba(255,255,255,.28);
+      box-shadow: 0 0 0 4px rgba(255,255,255,.06);
+    }
+    .divider{ height:1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent); }
+  </style>
+</head>
+
+<body class="grad text-white">
+  <!-- Top bar -->
+  <header class="sticky top-0 z-40">
+    <div class="glass">
+      <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+        <a href="#top" class="flex items-center gap-2">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white/10 ringline">木</span>
+          <div class="leading-tight">
+            <div class="font-semibold tracking-wide">木人艸 春酒外燴</div>
+            <div class="text-xs text-white/60">Warm • Curated • Memorable</div>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-5 text-sm text-white/75">
+          <a class="hover:text-white" href="#highlights">服務亮點</a>
+          <a class="hover:text-white" href="#process">流程</a>
+          <a class="hover:text-white" href="#packages">方案</a>
+          <a class="hover:text-white" href="#faq">FAQ</a>
+        </nav>
+
+        <div class="flex items-center gap-2">
+          <a href="#form" class="btn inline-flex items-center justify-center rounded-xl bg-white text-black px-4 py-2 text-sm font-semibold">
+            立即詢價
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="top">
+    <section class="mx-auto max-w-6xl px-4 pt-10 pb-10 md:pt-16 md:pb-14">
+      <div class="grid md:grid-cols-12 gap-6 items-stretch">
+        <div class="md:col-span-7">
+          <div class="inline-flex items-center gap-2 rounded-full badge px-3 py-1 text-xs text-white/70">
+            <span class="h-2 w-2 rounded-full bg-emerald-400/90"></span>
+            春酒季檔期｜企業聚會｜空間佈置＋餐飲整合
+          </div>
+
+          <h1 class="mt-4 text-3xl md:text-5xl font-bold tracking-tight leading-[1.08]">
+            不只是吃飯，<br class="hidden md:block" />
+            更是一場感官派對！
+          </h1>
+
+          <p class="mt-4 text-white/75 text-base md:text-lg leading-relaxed">
+            打造最有溫度的春酒外燴。<br class="hidden md:block" />
+            我們深知，一場好的春酒不該只是填飽肚子，更是企業與員工之間，
+            一次最溫柔的對話與慰勞——讓每個人都感覺：今天真的被好好照顧。
+          </p>
+
+          <div class="mt-6 flex flex-col sm:flex-row gap-3">
+            <a href="#form" class="btn inline-flex items-center justify-center rounded-2xl bg-white text-black px-6 py-3 font-semibold">
+              30 秒快速詢價
+            </a>
+            <a href="#highlights" class="btn inline-flex items-center justify-center rounded-2xl bg-white/10 px-6 py-3 font-semibold ringline">
+              看看怎麼做出「有溫度」
+            </a>
+          </div>
+
+          <div class="mt-6 grid grid-cols-3 gap-3 max-w-xl">
+            <div class="glass rounded-2xl p-4">
+              <div class="text-sm font-semibold">一站式整合</div>
+              <div class="text-xs text-white/60 mt-1">餐點 × 佈置 × 現場</div>
+            </div>
+            <div class="glass rounded-2xl p-4">
+              <div class="text-sm font-semibold">可客製</div>
+              <div class="text-xs text-white/60 mt-1">預算、人數、風格</div>
+            </div>
+            <div class="glass rounded-2xl p-4">
+              <div class="text-sm font-semibold">好拍好分享</div>
+              <div class="text-xs text-white/60 mt-1">氛圍感＋照片出片</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right visual card -->
+        <div class="md:col-span-5">
+          <div class="glass soft-shadow rounded-3xl p-5 md:p-6 h-full">
+            <div class="flex items-center justify-between">
+              <div>
+                <div class="text-sm text-white/60">春酒感官派對｜重點清單</div>
+                <div class="text-lg font-semibold mt-1">你要的，我們都做成「現場感」</div>
+              </div>
+              <div class="hidden md:block text-xs text-white/50">2026 春酒季</div>
+            </div>
+
+            <div class="divider my-5"></div>
+
+            <ul class="space-y-3 text-sm text-white/78">
+              <li class="flex gap-3">
+                <span class="mt-1 h-2.5 w-2.5 rounded-full bg-amber-300"></span>
+                <div><b class="text-white">佈置策展</b>：桌面層次、主視覺點、動線與拍照點</div>
+              </li>
+              <li class="flex gap-3">
+                <span class="mt-1 h-2.5 w-2.5 rounded-full bg-orange-300"></span>
+                <div><b class="text-white">餐點節奏</b>：前菜→主餐→甜點，吃起來有故事</div>
+              </li>
+              <li class="flex gap-3">
+                <span class="mt-1 h-2.5 w-2.5 rounded-full bg-pink-300"></span>
+                <div><b class="text-white">現場服務</b>：補盤、清潔、動線協助，讓你不用忙</div>
+              </li>
+              <li class="flex gap-3">
+                <span class="mt-1 h-2.5 w-2.5 rounded-full bg-emerald-300"></span>
+                <div><b class="text-white">透明報價</b>：依預算做最好的配置，不亂加項</div>
+              </li>
+            </ul>
+
+            <div class="mt-6 grid grid-cols-2 gap-3">
+              <a href="#packages" class="btn rounded-2xl bg-white/10 ringline px-4 py-3 text-center text-sm font-semibold">
+                看方案範例
+              </a>
+              <a href="#form" class="btn rounded-2xl bg-white text-black px-4 py-3 text-center text-sm font-semibold">
+                直接報價
+              </a>
+            </div>
+
+            <p class="mt-4 text-xs text-white/55">
+              ※ 可依「人數 / 場地型態 / 是否含佈置」客製組合，讓預算更有效。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlights -->
+    <section id="highlights" class="mx-auto max-w-6xl px-4 py-10 md:py-14">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl md:text-3xl font-bold">服務亮點</h2>
+          <p class="text-white/70 mt-2">把春酒做成一場「被照顧」的體驗，而不是一個流程。</p>
+        </div>
+      </div>
+
+      <div class="mt-6 grid md:grid-cols-3 gap-4">
+        <div class="glass rounded-3xl p-6">
+          <div class="text-sm text-white/60">01</div>
+          <div class="mt-2 font-semibold text-lg">有溫度的策展佈置</div>
+          <p class="mt-2 text-sm text-white/70 leading-relaxed">
+            不只擺盤，是整體氛圍：主視覺點、桌面層次、拍照角度與動線，一次到位。
+          </p>
+        </div>
+        <div class="glass rounded-3xl p-6">
+          <div class="text-sm text-white/60">02</div>
+          <div class="mt-2 font-semibold text-lg">依預算設計菜單</div>
+          <p class="mt-2 text-sm text-white/70 leading-relaxed">
+            以「吃得滿足＋看得漂亮」為原則調配比例，讓每一分預算都花在體感上。
+          </p>
+        </div>
+        <div class="glass rounded-3xl p-6">
+          <div class="text-sm text-white/60">03</div>
+          <div class="mt-2 font-semibold text-lg">現場交給我們，你只要當主人</div>
+          <p class="mt-2 text-sm text-white/70 leading-relaxed">
+            補盤、整桌、清潔、協助動線，讓你能真正加入聚會，而不是一直在救火。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process" class="mx-auto max-w-6xl px-4 py-10 md:py-14">
+      <div class="glass rounded-3xl p-6 md:p-8">
+        <h2 class="text-2xl md:text-3xl font-bold">合作流程</h2>
+        <p class="text-white/70 mt-2">清楚的節點，讓你安心掌握進度與成果。</p>
+
+        <div class="mt-6 grid md:grid-cols-4 gap-4">
+          <div class="rounded-2xl bg-white/5 ringline p-5">
+            <div class="text-xs text-white/60">STEP 1</div>
+            <div class="mt-2 font-semibold">快速了解需求</div>
+            <div class="mt-2 text-sm text-white/70">人數、預算、場地型態、活動氛圍</div>
+          </div>
+          <div class="rounded-2xl bg-white/5 ringline p-5">
+            <div class="text-xs text-white/60">STEP 2</div>
+            <div class="mt-2 font-semibold">提案與報價</div>
+            <div class="mt-2 text-sm text-white/70">菜單建議＋佈置方向＋費用清單</div>
+          </div>
+          <div class="rounded-2xl bg-white/5 ringline p-5">
+            <div class="text-xs text-white/60">STEP 3</div>
+            <div class="mt-2 font-semibold">確認細節</div>
+            <div class="mt-2 text-sm text-white/70">動線、時間表、進撤場、現場需求</div>
+          </div>
+          <div class="rounded-2xl bg-white/5 ringline p-5">
+            <div class="text-xs text-white/60">STEP 4</div>
+            <div class="mt-2 font-semibold">現場執行</div>
+            <div class="mt-2 text-sm text-white/70">準時進場、完成佈置、餐期服務</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Packages -->
+    <section id="packages" class="mx-auto max-w-6xl px-4 py-10 md:py-14">
+      <h2 class="text-2xl md:text-3xl font-bold">方案範例</h2>
+      <p class="text-white/70 mt-2">以下是常見方向（實際依你預算與人數客製）。</p>
+
+      <div class="mt-6 grid md:grid-cols-3 gap-4">
+        <div class="glass rounded-3xl p-6">
+          <div class="inline-flex rounded-full badge px-3 py-1 text-xs text-white/70">輕量氛圍</div>
+          <div class="mt-3 text-xl font-bold">Warm Start</div>
+          <p class="mt-2 text-sm text-white/70">適合：小型部門春酒 / 會議室聚會</p>
+          <ul class="mt-4 space-y-2 text-sm text-white/75">
+            <li>• 精緻餐點配置（鹹食＋甜點）</li>
+            <li>• 桌面層次與主視覺點</li>
+            <li>• 現場簡易補盤協助</li>
+          </ul>
+          <a href="#form" class="btn mt-6 block rounded-2xl bg-white/10 ringline px-4 py-3 text-center font-semibold">
+            用這方向詢價
+          </a>
+        </div>
+
+        <div class="glass rounded-3xl p-6 ringline">
+          <div class="inline-flex rounded-full bg-white text-black px-3 py-1 text-xs font-semibold">最受歡迎</div>
+          <div class="mt-3 text-xl font-bold">Sense Party</div>
+          <p class="mt-2 text-sm text-white/70">適合：公司春酒 / 需要「出片」的場合</p>
+          <ul class="mt-4 space-y-2 text-sm text-white/75">
+            <li>• 餐點節奏完整（前菜→主餐→甜點）</li>
+            <li>• 明確拍照點與佈置焦點</li>
+            <li>• 現場服務：補盤、整桌、清潔</li>
+          </ul>
+          <a href="#form" class="btn mt-6 block rounded-2xl bg-white text-black px-4 py-3 text-center font-semibold">
+            直接請你報價
+          </a>
+        </div>
+
+        <div class="glass rounded-3xl p-6">
+          <div class="inline-flex rounded-full badge px-3 py-1 text-xs text-white/70">高規策展</div>
+          <div class="mt-3 text-xl font-bold">Signature Curated</div>
+          <p class="mt-2 text-sm text-white/70">適合：品牌春酒 / 需要強主題與舞台感</p>
+          <ul class="mt-4 space-y-2 text-sm text-white/75">
+            <li>• 主題化佈置與空間策展</li>
+            <li>• 甜點/飲品區重點設計</li>
+            <li>• 全程現場執行與控場</li>
+          </ul>
+          <a href="#form" class="btn mt-6 block rounded-2xl bg-white/10 ringline px-4 py-3 text-center font-semibold">
+            我想做高規
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery (placeholders) -->
+    <section class="mx-auto max-w-6xl px-4 py-10 md:py-14">
+      <div class="flex items-end justify-between">
+        <div>
+          <h2 class="text-2xl md:text-3xl font-bold">氛圍作品區</h2>
+          <p class="text-white/70 mt-2">把你們的春酒變成一張張「值得被收藏」的照片。</p>
+        </div>
+        <div class="hidden md:block text-sm text-white/55">（可替換成你的實拍圖）</div>
+      </div>
+
+      <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="aspect-[4/5] rounded-2xl bg-white/5 ringline"></div>
+        <div class="aspect-[4/5] rounded-2xl bg-white/5 ringline"></div>
+        <div class="aspect-[4/5] rounded-2xl bg-white/5 ringline"></div>
+        <div class="aspect-[4/5] rounded-2xl bg-white/5 ringline"></div>
+      </div>
+
+      <p class="mt-3 text-xs text-white/55">
+        小提醒：圖片建議用直式 4:5（1080×1350）或 3:4（1200×1600），整體會更有質感。
+      </p>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="mx-auto max-w-6xl px-4 py-10 md:py-14">
+      <div class="glass rounded-3xl p-6 md:p-8">
+        <h2 class="text-2xl md:text-3xl font-bold">FAQ</h2>
+
+        <div class="mt-6 grid md:grid-cols-2 gap-4">
+          <details class="rounded-2xl bg-white/5 ringline p-5">
+            <summary class="cursor-pointer font-semibold">預算不高也能做出氛圍嗎？</summary>
+            <p class="mt-2 text-sm text-white/70 leading-relaxed">
+              可以。我們會把預算集中在「視覺焦點＋吃起來的滿足感」，用最少的佈置做出最強體感。
+            </p>
+          </details>
+          <details class="rounded-2xl bg-white/5 ringline p-5">
+            <summary class="cursor-pointer font-semibold">可以只要餐點，不含佈置嗎？</summary>
+            <p class="mt-2 text-sm text-white/70 leading-relaxed">
+              可以。你也可以選「輕佈置」：只做桌面層次與主視覺點，成本更好控。
+            </p>
+          </details>
+          <details class="rounded-2xl bg-white/5 ringline p-5">
+            <summary class="cursor-pointer font-semibold">需要提前多久預訂？</summary>
+            <p class="mt-2 text-sm text-white/70 leading-relaxed">
+              春酒旺季建議越早越好（場地與檔期會搶）。若你已確定日期，直接填表最快。
+            </p>
+          </details>
+          <details class="rounded-2xl bg-white/5 ringline p-5">
+            <summary class="cursor-pointer font-semibold">可以支援公司大樓/辦公室場地嗎？</summary>
+            <p class="mt-2 text-sm text-white/70 leading-relaxed">
+              可以。我們會特別評估電梯、動線、備餐區、垃圾回收點與進撤場時間，確保不影響辦公。
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form -->
+    <section id="form" class="mx-auto max-w-6xl px-4 pb-16 md:pb-20">
+      <div class="grid md:grid-cols-12 gap-6 items-start">
+        <div class="md:col-span-5">
+          <h2 class="text-2xl md:text-3xl font-bold">30 秒快速詢價</h2>
+          <p class="text-white/70 mt-2 leading-relaxed">
+            留下基本資訊，我們會用最短時間回覆你：<br/>
+            「怎麼用你的預算，做出最有溫度的春酒。」
+          </p>
+
+          <div class="mt-6 glass rounded-3xl p-6">
+            <div class="text-sm font-semibold">你會收到什麼？</div>
+            <ul class="mt-3 space-y-2 text-sm text-white/75">
+              <li>• 初步方案方向（餐點＋佈置建議）</li>
+              <li>• 透明報價區間（依人數與需求）</li>
+              <li>• 需要現勘/動線評估也可安排</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="md:col-span-7">
+          <div class="glass rounded-3xl p-6 md:p-8 soft-shadow">
+            <!-- ✅ 方式A：Formspree（把 action 換成你的） -->
+            <!-- <form id="inquiryForm" action="https://formspree.io/f/XXXXYYYY" method="POST" class="space-y-4"> -->
+
+            <!-- ✅ 方式B：用 JS fetch 打到你的 GAS Web App（見下方第2段） -->
+            <form id="inquiryForm" class="space-y-4">
+
+              <div class="grid md:grid-cols-2 gap-4">
+                <div>
+                  <label class="text-sm text-white/70">姓名 *</label>
+                  <input class="input mt-2 w-full rounded-2xl px-4 py-3" name="name" required placeholder="例如：王小明" />
+                </div>
+                <div>
+                  <label class="text-sm text-white/70">電話 *</label>
+                  <input class="input mt-2 w-full rounded-2xl px-4 py-3" name="phone" required placeholder="例如：0912-345-678" />
+                </div>
+              </div>
+
+              <div class="grid md:grid-cols-2 gap-4">
+                <div>
+                  <label class="text-sm text-white/70">預算 *</label>
+                  <select class="input mt-2 w-full rounded-2xl px-4 py-3" name="budget" required>
+                    <option value="" selected disabled>請選擇</option>
+                    <option>3萬以下</option>
+                    <option>3–6萬</option>
+                    <option>6–10萬</option>
+                    <option>10–20萬</option>
+                    <option>20萬以上</option>
+                    <option>尚未確定，想先聊聊</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="text-sm text-white/70">活動類型 *</label>
+                  <select class="input mt-2 w-full rounded-2xl px-4 py-3" name="eventType" required>
+                    <option value="" selected disabled>請選擇</option>
+                    <option>公司春酒（辦公室/會議室）</option>
+                    <option>公司春酒（餐廳/場地）</option>
+                    <option>部門聚會/Team Building</option>
+                    <option>尾牙/春酒（含舞台/活動）</option>
+                    <option>其他（備註說明）</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="text-sm text-white/70">備註</label>
+                <textarea class="input mt-2 w-full rounded-2xl px-4 py-3 min-h-[120px]" name="note"
+                  placeholder="可填：日期/人數/地點/是否需要佈置、是否有素食/過敏、想要的氛圍（溫柔/派對/高級感）"></textarea>
+              </div>
+
+              <!-- 追蹤欄位（可用於來源分析） -->
+              <input type="hidden" name="page" value="spring-banquet-landing" />
+              <input type="hidden" name="utm_source" id="utm_source" />
+              <input type="hidden" name="utm_medium" id="utm_medium" />
+              <input type="hidden" name="utm_campaign" id="utm_campaign" />
+
+              <button id="submitBtn" type="submit"
+                class="btn w-full rounded-2xl bg-white text-black px-4 py-3 font-semibold">
+                送出詢價（寄到 admin_1@muzentsao.com）
+              </button>
+
+              <p id="formMsg" class="text-sm text-white/70 hidden"></p>
+              <p class="text-xs text-white/50">
+                送出即表示同意我們僅用於聯絡回覆，不做其他用途。
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Mobile Sticky CTA -->
+  <div class="md:hidden fixed bottom-3 left-0 right-0 z-50 px-4">
+    <a href="#form" class="btn block rounded-2xl bg-white text-black text-center py-3 font-semibold soft-shadow">
+      立即詢價
+    </a>
+  </div>
+
+  <footer class="mx-auto max-w-6xl px-4 pb-10 text-white/55 text-xs">
+    <div class="divider mb-6"></div>
+    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div>© 木人艸 春酒外燴｜不只是吃飯，更是一場感官派對</div>
+      <div>表單通知信箱：admin_1@muzentsao.com</div>
+    </div>
+  </footer>
+
+  <script>
+    // 讀取 UTM 參數
+    const params = new URLSearchParams(location.search);
+    ["utm_source","utm_medium","utm_campaign"].forEach(k=>{
+      const el = document.getElementById(k);
+      if (el) el.value = params.get(k) || "";
+    });
+
+    // ✅ 方式B：Google Apps Script Web App 送出（把 GAS_URL 換成你的部署網址）
+    const GAS_URL = ""; // 例如：https://script.google.com/macros/s/XXXX/exec
+
+    const form = document.getElementById("inquiryForm");
+    const btn = document.getElementById("submitBtn");
+    const msg = document.getElementById("formMsg");
+
+    function setMsg(text, ok=true){
+      msg.classList.remove("hidden");
+      msg.textContent = text;
+      msg.style.opacity = "1";
+      msg.style.color = ok ? "rgba(255,255,255,.82)" : "rgba(255,180,180,.92)";
+    }
+
+    form.addEventListener("submit", async (e) => {
+      // 如果你用 Formspree action，就把下面三行刪掉，讓它走原生 submit 即可。
+      e.preventDefault();
+
+      // 沒填 GAS_URL：就先提示你去貼上部署網址（避免誤以為已寄出）
+      if (!GAS_URL) {
+        setMsg("尚未設定表單送出端點（GAS_URL）。請先用下方教學部署 Google Apps Script 或改用 Formspree。", false);
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = "送出中…";
+
+      const fd = new FormData(form);
+      const payload = Object.fromEntries(fd.entries());
+
+      try {
+        const res = await fetch(GAS_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+
+        const data = await res.json().catch(()=>({}));
+        if (!res.ok || !data.ok) throw new Error(data.error || "送出失敗");
+
+        setMsg("已送出！我們會盡快與你聯絡並提供初步方案與報價。");
+        form.reset();
+        btn.textContent = "已送出 ✔";
+      } catch (err) {
+        console.error(err);
+        setMsg("送出失敗：請稍後再試，或改用 Formspree 方式。", false);
+        btn.textContent = "重新送出";
+      } finally {
+        btn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
