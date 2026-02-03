@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>木人艸｜春酒外燴｜不只是吃飯，更是一場感官派對</title>
-  <meta name="description" content="不只是吃飯，更是一場感官派對！打造最有溫度的春酒外燴。從餐點到佈置，一站式策展服務，讓企業與員工在春酒好好被照顧。" />
+  <title>木人艸｜2026 春酒外燴專案｜感官與味蕾的極致派對</title>
+  <meta name="description" content="打造最具奢華感的春酒外燴。從金燦佈置到精緻餐點，一站式策展服務，讓企業聚會成為奢華盛宴。" />
 
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -14,62 +14,61 @@
 
   <style>
     :root{
-      /* 調整為深棕紅與琥珀金調性 */
-      --bg:#160A0A; 
-      --card:#1F1212;
-      --line:rgba(212,175,55,.15);
-      --text:rgba(255,255,255,.92);
-      --muted:rgba(255,255,255,.6);
+      /* 調整為高品質深酒紅與琥珀金 */
+      --bg:#120808; 
+      --card:#1A0F0F;
+      --line:rgba(212,175,55,.2);
+      --text:rgba(255,255,255,.95);
+      --muted:rgba(255,255,255,.5);
       --accent:#D4AF37; /* 琥珀金 */
     }
-    body{ font-family:"Noto Sans TC", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Apple Color Emoji","Segoe UI Emoji"; background: var(--bg); }
-    .glass{ background:rgba(31,18,18,.75); backdrop-filter: blur(12px); border:1px solid var(--line); }
-    .soft-shadow{ box-shadow: 0 20px 50px rgba(0,0,0,.5); }
-    .ringline{ outline: 1px solid rgba(212,175,55,.2); outline-offset: 0; }
+    body{ font-family:"Noto Sans TC", system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); }
+    .glass{ background:rgba(26,15,15,.8); backdrop-filter: blur(16px); border:1px solid var(--line); }
+    .soft-shadow{ box-shadow: 0 30px 60px rgba(0,0,0,.6); }
+    .ringline{ outline: 1px solid rgba(212,175,55,.25); outline-offset: 0; }
     .grad{
       background:
-        radial-gradient(900px 500px at 20% 10%, rgba(139,0,0,.15), transparent 60%),
-        radial-gradient(800px 420px at 80% 15%, rgba(212,175,55,.12), transparent 62%),
-        radial-gradient(900px 520px at 55% 90%, rgba(128,0,32,.12), transparent 60%),
-        linear-gradient(180deg, #120808 0%, #160A0A 55%, #120808 100%);
+        radial-gradient(900px 500px at 20% 10%, rgba(139,0,0,.18), transparent 60%),
+        radial-gradient(800px 420px at 80% 15%, rgba(212,175,55,.15), transparent 62%),
+        radial-gradient(900px 520px at 55% 90%, rgba(80,0,0,.15), transparent 60%),
+        linear-gradient(180deg, #120808 0%, #1A0A0A 55%, #120808 100%);
     }
-    .badge{ border:1px solid rgba(212,175,55,.3); color: var(--accent) !important; }
+    .badge{ border:1px solid rgba(212,175,55,.4); color: var(--accent) !important; background: rgba(212,175,55,.05); }
     .btn{
-      transition: transform .18s ease, box-shadow .18s ease, opacity .18s ease;
+      transition: all .25s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    .btn:hover{ transform: translateY(-2px); box-shadow: 0 15px 35px rgba(212,175,55,.2); }
+    .btn:hover{ transform: translateY(-2px); box-shadow: 0 10px 25px rgba(212,175,55,.3); }
     .input{
-      background: rgba(255,255,255,.05);
-      border: 1px solid rgba(212,175,55,.15);
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(212,175,55,.2);
       color: rgba(255,255,255,.9);
       outline: none;
     }
     .input:focus{
       border-color: var(--accent);
-      box-shadow: 0 0 0 4px rgba(212,175,55,.1);
+      background: rgba(255,255,255,.07);
     }
-    .divider{ height:1px; background: linear-gradient(90deg, transparent, rgba(212,175,55,.25), transparent); }
+    .divider{ height:1px; background: linear-gradient(90deg, transparent, rgba(212,175,55,.3), transparent); }
     
-    /* 圖片容器優化 */
-    .img-slot { position: relative; overflow: hidden; background: #2A1A1A; border-radius: 1rem; }
-    .img-slot img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-    .img-slot:hover img { transform: scale(1.05); }
+    .img-slot { position: relative; overflow: hidden; background: #251515; border-radius: 1.5rem; border: 1px solid rgba(212,175,55,.1); }
+    .img-slot img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease; }
+    .img-slot:hover img { transform: scale(1.08); }
   </style>
 </head>
 
-<body class="grad text-white">
+<body class="grad">
   <header class="sticky top-0 z-40">
-    <div class="glass">
+    <div class="glass border-x-0 border-t-0">
       <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
         <a href="#top" class="flex items-center gap-2">
-          <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white/10 ringline text-[#D4AF37]">木</span>
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-[#D4AF37]/10 ringline text-[#D4AF37] font-bold">木</span>
           <div class="leading-tight">
-            <div class="font-semibold tracking-wide">木人艸</div>
-            <div class="text-[10px] text-white/50 tracking-widest uppercase">Catering & Decor</div>
+            <div class="font-bold tracking-wide">木人艸</div>
+            <div class="text-[9px] text-[#D4AF37]/60 tracking-widest uppercase font-medium">Banquet Design</div>
           </div>
         </a>
 
-        <nav class="hidden md:flex items-center gap-6 text-sm text-white/70">
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-white/60">
           <a class="hover:text-[#D4AF37] transition-colors" href="#highlights">亮點</a>
           <a class="hover:text-[#D4AF37] transition-colors" href="#process">流程</a>
           <a class="hover:text-[#D4AF37] transition-colors" href="#packages">方案</a>
@@ -89,55 +88,55 @@
     <section class="mx-auto max-w-6xl px-4 pt-10 pb-10 md:pt-16 md:pb-14">
       <div class="grid md:grid-cols-12 gap-8 items-center">
         <div class="md:col-span-7">
-          <div class="inline-flex items-center gap-2 rounded-full badge px-3 py-1 text-xs font-medium">
-            <span class="h-2 w-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
-            2026 春酒季專屬方案
+          <div class="inline-flex items-center gap-2 rounded-full badge px-4 py-1 text-[11px] font-bold uppercase tracking-widest">
+            <span class="h-1.5 w-1.5 rounded-full bg-[#D4AF37] animate-pulse"></span>
+            2026 春酒專屬
           </div>
 
           <h1 class="mt-6 text-4xl md:text-6xl font-bold tracking-tight leading-tight">
             不只是吃飯，<br />
-            更是場感官派對。
+            更是場<span class="text-[#D4AF37]">感官派對</span>。
           </h1>
 
-          <p class="mt-6 text-white/70 text-lg max-w-lg">
-            用細膩餐點與金燦佈置，為企業打造一場極具溫度的慰勞儀式。
+          <p class="mt-6 text-white/60 text-lg max-w-md leading-relaxed">
+            暖金佈置與細膩餐點，為企業打造具溫度的慰勞儀式。
           </p>
 
           <div class="mt-8 flex flex-col sm:flex-row gap-4">
-            <a href="#form" class="btn inline-flex items-center justify-center rounded-2xl bg-white text-black px-8 py-4 font-bold">
+            <a href="#form" class="btn inline-flex items-center justify-center rounded-2xl bg-[#D4AF37] text-black px-8 py-4 font-bold">
               立即詢價
             </a>
-            <a href="#highlights" class="btn inline-flex items-center justify-center rounded-2xl bg-white/5 px-8 py-4 font-bold ringline">
-              品牌精神
+            <a href="#highlights" class="btn inline-flex items-center justify-center rounded-2xl bg-white/5 px-8 py-4 font-bold ringline text-white/80">
+              品牌
             </a>
           </div>
 
           <div class="mt-10 grid grid-cols-3 gap-4">
-            <div class="glass rounded-2xl p-4">
+            <div class="glass rounded-2xl p-4 border-[#D4AF37]/20">
               <div class="text-sm font-bold text-[#D4AF37]">全案策劃</div>
-              <div class="text-[11px] text-white/50 mt-1">餐飲與佈置整合</div>
+              <div class="text-[10px] text-white/40 mt-1">餐飲佈置整合</div>
             </div>
-            <div class="glass rounded-2xl p-4">
-              <div class="text-sm font-bold text-[#D4AF37]">靈活預算</div>
-              <div class="text-[11px] text-white/50 mt-1">精準對應規模</div>
+            <div class="glass rounded-2xl p-4 border-[#D4AF37]/20">
+              <div class="text-sm font-bold text-[#D4AF37]">預算靈活</div>
+              <div class="text-[10px] text-white/40 mt-1">精準對應規模</div>
             </div>
-            <div class="glass rounded-2xl p-4">
-              <div class="text-sm font-bold text-[#D4AF37]">絕美出片</div>
-              <div class="text-[11px] text-white/50 mt-1">極高氛圍感</div>
+            <div class="glass rounded-2xl p-4 border-[#D4AF37]/20">
+              <div class="text-sm font-bold text-[#D4AF37]">絕美氛圍</div>
+              <div class="text-[10px] text-white/40 mt-1">極致視覺出片</div>
             </div>
           </div>
         </div>
 
         <div class="md:col-span-5">
-          <div class="glass soft-shadow rounded-[2.5rem] p-2 h-full overflow-hidden">
-             <div class="img-slot w-full h-[400px] md:h-full min-h-[500px]">
+          <div class="glass soft-shadow rounded-[2.5rem] p-2 h-full overflow-hidden border-[#D4AF37]/10">
+              <div class="img-slot w-full h-[400px] md:h-full min-h-[500px]">
                 <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=1200&auto=format&fit=crop" alt="spring-banquet-hero" />
-                <div class="absolute inset-0 bg-gradient-to-t from-[#160A0A] via-transparent to-transparent opacity-60"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#120808] via-transparent to-transparent opacity-80"></div>
                 <div class="absolute bottom-8 left-8 right-8">
-                   <div class="text-xs text-[#D4AF37] uppercase tracking-widest mb-1">Main Visual</div>
-                   <div class="text-xl font-bold">年度春酒感官場域</div>
+                   <div class="text-[10px] text-[#D4AF37] uppercase tracking-[0.3em] font-bold mb-1">Banquet Visual</div>
+                   <div class="text-xl font-bold">春酒感官場域</div>
                 </div>
-             </div>
+              </div>
           </div>
         </div>
       </div>
@@ -145,94 +144,92 @@
 
     <section id="highlights" class="mx-auto max-w-6xl px-4 py-12">
       <div class="text-center mb-10">
-        <h2 class="text-3xl font-bold">服務亮點</h2>
-        <div class="h-1 w-12 bg-[#D4AF37] mx-auto mt-4"></div>
+        <h2 class="text-3xl font-bold tracking-wider">服務亮點</h2>
+        <div class="h-1 w-8 bg-[#D4AF37] mx-auto mt-4"></div>
       </div>
 
       <div class="grid md:grid-cols-3 gap-6">
-        <div class="glass rounded-3xl p-8 text-center">
-          <div class="text-[#D4AF37] text-4xl mb-4 opacity-50">01</div>
-          <h3 class="font-bold text-xl mb-3">暖金美學佈置</h3>
-          <p class="text-sm text-white/60 leading-relaxed">主視覺點與拍照動線規劃，打造高質感的派對氛圍。</p>
+        <div class="glass rounded-3xl p-8 text-center border-[#D4AF37]/10">
+          <div class="text-[#D4AF37] text-4xl mb-4 font-serif italic opacity-40">01</div>
+          <h3 class="font-bold text-xl mb-3">暖金美學</h3>
+          <p class="text-sm text-white/50 leading-relaxed">規劃主視覺與拍照動線，打造高質感派對氛圍。</p>
         </div>
-        <div class="glass rounded-3xl p-8 text-center">
-          <div class="text-[#D4AF37] text-4xl mb-4 opacity-50">02</div>
-          <h3 class="font-bold text-xl mb-3">精準菜單配置</h3>
-          <p class="text-sm text-white/60 leading-relaxed">依預算調配鹹甜比例，確保賓客享受視覺與味覺雙重滿足。</p>
+        <div class="glass rounded-3xl p-8 text-center border-[#D4AF37]/10">
+          <div class="text-[#D4AF37] text-4xl mb-4 font-serif italic opacity-40">02</div>
+          <h3 class="font-bold text-xl mb-3">精準菜單</h3>
+          <p class="text-sm text-white/50 leading-relaxed">依預算調配鹹甜比例，確保視覺與味覺雙滿足。</p>
         </div>
-        <div class="glass rounded-3xl p-8 text-center">
-          <div class="text-[#D4AF37] text-4xl mb-4 opacity-50">03</div>
-          <h3 class="font-bold text-xl mb-3">全心控場執行</h3>
-          <p class="text-sm text-white/60 leading-relaxed">從備餐到清潔全權負責，讓您專注於與夥伴的聚會時光。</p>
+        <div class="glass rounded-3xl p-8 text-center border-[#D4AF37]/10">
+          <div class="text-[#D4AF37] text-4xl mb-4 font-serif italic opacity-40">03</div>
+          <h3 class="font-bold text-xl mb-3">專業執行</h3>
+          <p class="text-sm text-white/50 leading-relaxed">備餐至清潔全權負責，專注與夥伴的聚會時光。</p>
         </div>
       </div>
     </section>
 
     <section id="process" class="mx-auto max-w-6xl px-4 py-12">
-      <div class="glass rounded-[3rem] p-8 md:p-12">
-        <h2 class="text-3xl font-bold mb-8">合作流程</h2>
-        <div class="grid md:grid-cols-4 gap-6">
+      <div class="glass rounded-[3rem] p-8 md:p-12 border-[#D4AF37]/10">
+        <h2 class="text-3xl font-bold mb-10">合作流程</h2>
+        <div class="grid md:grid-cols-4 gap-4">
           <div class="bg-white/5 ringline rounded-2xl p-6">
-            <div class="text-[#D4AF37] font-bold mb-2">Step 01</div>
-            <div class="font-bold mb-2 text-lg">需求洽談</div>
-            <p class="text-xs text-white/50">確認預算、人數與場地特性。</p>
+            <div class="text-[#D4AF37] font-bold mb-1 text-sm">Step 01</div>
+            <div class="font-bold mb-2">需求洽談</div>
+            <p class="text-[11px] text-white/40">確認預算與場地特性。</p>
           </div>
           <div class="bg-white/5 ringline rounded-2xl p-6">
-            <div class="text-[#D4AF37] font-bold mb-2">Step 02</div>
-            <div class="font-bold mb-2 text-lg">方案提案</div>
-            <p class="text-xs text-white/50">提供菜單建議與佈置視覺圖。</p>
+            <div class="text-[#D4AF37] font-bold mb-1 text-sm">Step 02</div>
+            <div class="font-bold mb-2">方案提案</div>
+            <p class="text-[11px] text-white/40">提供菜單建議與佈置圖。</p>
           </div>
           <div class="bg-white/5 ringline rounded-2xl p-6">
-            <div class="text-[#D4AF37] font-bold mb-2">Step 03</div>
-            <div class="font-bold mb-2 text-lg">細節確認</div>
-            <p class="text-xs text-white/50">簽約定案並進行現場場勘。</p>
+            <div class="text-[#D4AF37] font-bold mb-1 text-sm">Step 03</div>
+            <div class="font-bold mb-2">細節確認</div>
+            <p class="text-[11px] text-white/40">簽約定案並實地場勘。</p>
           </div>
           <div class="bg-white/5 ringline rounded-2xl p-6">
-            <div class="text-[#D4AF37] font-bold mb-2">Step 04</div>
-            <div class="font-bold mb-2 text-lg">現場執行</div>
-            <p class="text-xs text-white/50">準時進場佈置並開始餐期。</p>
+            <div class="text-[#D4AF37] font-bold mb-1 text-sm">Step 04</div>
+            <div class="font-bold mb-2">現場執行</div>
+            <p class="text-[11px] text-white/40">準時進場，餐期控管。</p>
           </div>
         </div>
       </div>
     </section>
 
     <section id="packages" class="mx-auto max-w-6xl px-4 py-12">
-      <h2 class="text-3xl font-bold text-center mb-10">方案範例</h2>
+      <h2 class="text-3xl font-bold text-center mb-10 tracking-widest">方案範例</h2>
       <div class="grid md:grid-cols-3 gap-6">
-        <div class="glass rounded-3xl p-8 flex flex-col">
-          <div class="text-xs text-[#D4AF37] mb-2 font-bold tracking-widest uppercase">Casual</div>
+        <div class="glass rounded-3xl p-8 flex flex-col border-[#D4AF37]/5">
+          <div class="text-[10px] text-[#D4AF37] mb-2 font-bold tracking-[0.2em] uppercase">Casual</div>
           <h3 class="text-2xl font-bold mb-4">Warm Start</h3>
-          <p class="text-sm text-white/50 mb-6">適合部門小聚，專注於基本氛圍。</p>
-          <ul class="space-y-3 text-sm text-white/70 mb-8 flex-grow">
+          <p class="text-sm text-white/40 mb-6">適合部門小聚，專注基本氛圍。</p>
+          <ul class="space-y-3 text-sm text-white/60 mb-8 flex-grow">
             <li class="flex items-center gap-2">✔ 精緻鹹甜拼盤</li>
             <li class="flex items-center gap-2">✔ 基礎美學佈置</li>
-            <li class="flex items-center gap-2">✔ 現場補盤維護</li>
           </ul>
-          <a href="#form" class="btn block text-center bg-white/5 ringline rounded-xl py-3 text-sm font-bold">了解方案</a>
+          <a href="#form" class="btn block text-center bg-white/5 ringline rounded-xl py-3 text-sm font-bold">查看</a>
         </div>
 
-        <div class="glass rounded-3xl p-8 flex flex-col ringline bg-white/5 scale-105">
-          <div class="inline-flex rounded-full bg-[#D4AF37] text-black px-3 py-1 text-[10px] font-black uppercase mb-4 self-start">Popular</div>
-          <h3 class="text-2xl font-bold mb-4">Sense Party</h3>
-          <p class="text-sm text-white/50 mb-6">全公司年度盛會，出片率與體感最高。</p>
-          <ul class="space-y-3 text-sm text-white/70 mb-8 flex-grow">
-            <li class="flex items-center gap-2 text-white">✔ 主視覺拍照牆</li>
-            <li class="flex items-center gap-2 text-white">✔ 完整餐飲敘事節奏</li>
-            <li class="flex items-center gap-2 text-white">✔ 全程專屬執行經理</li>
+        <div class="glass rounded-3xl p-8 flex flex-col ringline bg-white/5 scale-105 border-[#D4AF37]/30">
+          <div class="inline-flex rounded-full bg-[#D4AF37] text-black px-3 py-1 text-[9px] font-black uppercase mb-4 self-start">Popular</div>
+          <h3 class="text-2xl font-bold mb-4 italic">Sense Party</h3>
+          <p class="text-sm text-white/40 mb-6">年度盛會，出片率最高。</p>
+          <ul class="space-y-3 text-sm text-white/80 mb-8 flex-grow">
+            <li class="flex items-center gap-2">✔ 主視覺拍照牆</li>
+            <li class="flex items-center gap-2">✔ 完整餐飲敘事</li>
+            <li class="flex items-center gap-2">✔ 專屬執行經理</li>
           </ul>
           <a href="#form" class="btn block text-center bg-[#D4AF37] text-black rounded-xl py-3 text-sm font-black">立即詢價</a>
         </div>
 
-        <div class="glass rounded-3xl p-8 flex flex-col">
-          <div class="text-xs text-[#D4AF37] mb-2 font-bold tracking-widest uppercase">VIP</div>
+        <div class="glass rounded-3xl p-8 flex flex-col border-[#D4AF37]/5">
+          <div class="text-[10px] text-[#D4AF37] mb-2 font-bold tracking-[0.2em] uppercase">VIP</div>
           <h3 class="text-2xl font-bold mb-4">Signature</h3>
-          <p class="text-sm text-white/50 mb-6">頂級策展，打造強烈品牌主題感。</p>
-          <ul class="space-y-3 text-sm text-white/70 mb-8 flex-grow">
+          <p class="text-sm text-white/40 mb-6">頂級策展，打造強烈主題感。</p>
+          <ul class="space-y-3 text-sm text-white/60 mb-8 flex-grow">
             <li class="flex items-center gap-2">✔ 沉浸式場域設計</li>
-            <li class="flex items-center gap-2">✔ 酒水甜點區客製化</li>
-            <li class="flex items-center gap-2">✔ 高規侍餐服務團隊</li>
+            <li class="flex items-center gap-2">✔ 高規侍餐服務</li>
           </ul>
-          <a href="#form" class="btn block text-center bg-white/5 ringline rounded-xl py-3 text-sm font-bold">了解方案</a>
+          <a href="#form" class="btn block text-center bg-white/5 ringline rounded-xl py-3 text-sm font-bold">查看</a>
         </div>
       </div>
     </section>
@@ -240,92 +237,93 @@
     <section class="mx-auto max-w-6xl px-4 py-12">
       <div class="flex items-center justify-between mb-10">
         <div>
-          <h2 class="text-3xl font-bold">氛圍實績</h2>
-          <p class="text-white/50 mt-2 text-sm">點擊圖片了解更多風格配置。</p>
+          <h2 class="text-3xl font-bold tracking-wider">氛圍實績</h2>
+          <p class="text-white/40 mt-2 text-sm">點擊圖片了解更多風格配置。</p>
         </div>
       </div>
 
       <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
         <div class="img-slot aspect-[3/4]">
-          <img src="" alt="spring-banquet-01" />
+          <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?q=80&w=800" alt="spring-banquet-01" />
           <button onclick="location.href='#form'" class="absolute inset-0 w-full h-full opacity-0">立即詢價</button>
         </div>
         <div class="img-slot aspect-[3/4]">
-          <img src="" alt="spring-banquet-02" />
+          <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?q=80&w=800" alt="spring-banquet-02" />
           <button onclick="location.href='#form'" class="absolute inset-0 w-full h-full opacity-0">立即詢價</button>
         </div>
         <div class="img-slot aspect-[3/4]">
-          <img src="" alt="spring-banquet-03" />
+          <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?q=80&w=800" alt="spring-banquet-03" />
           <button onclick="location.href='#form'" class="absolute inset-0 w-full h-full opacity-0">立即詢價</button>
         </div>
         <div class="img-slot aspect-[3/4]">
-          <img src="" alt="spring-banquet-04" />
+          <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=800" alt="spring-banquet-04" />
           <button onclick="location.href='#form'" class="absolute inset-0 w-full h-full opacity-0">立即詢價</button>
         </div>
         <div class="img-slot aspect-[3/4]">
-          <img src="" alt="spring-banquet-05" />
+          <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=800" alt="spring-banquet-05" />
           <button onclick="location.href='#form'" class="absolute inset-0 w-full h-full opacity-0">立即詢價</button>
         </div>
         <div class="img-slot aspect-[3/4]">
-          <img src="" alt="spring-banquet-06" />
+          <img src="https://images.unsplash.com/photo-1530103043960-ef38714abb15?q=80&w=800" alt="spring-banquet-06" />
           <button onclick="location.href='#form'" class="absolute inset-0 w-full h-full opacity-0">立即詢價</button>
         </div>
         <div class="img-slot aspect-[3/4]">
-          <img src="" alt="spring-banquet-07" />
+          <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=800" alt="spring-banquet-07" />
           <button onclick="location.href='#form'" class="absolute inset-0 w-full h-full opacity-0">立即詢價</button>
         </div>
         <div class="img-slot aspect-[3/4]">
-          <img src="" alt="spring-banquet-08" />
+          <img src="https://images.unsplash.com/photo-1516997121675-4c2d1684aa3e?q=80&w=800" alt="spring-banquet-08" />
           <button onclick="location.href='#form'" class="absolute inset-0 w-full h-full opacity-0">立即詢價</button>
         </div>
         <div class="img-slot aspect-[3/4]">
-          <img src="" alt="spring-banquet-09" />
+          <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=800" alt="spring-banquet-09" />
           <button onclick="location.href='#form'" class="absolute inset-0 w-full h-full opacity-0">立即詢價</button>
         </div>
         <div class="img-slot aspect-[3/4]">
-          <img src="" alt="spring-banquet-10" />
+          <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=800" alt="spring-banquet-10" />
           <button onclick="location.href='#form'" class="absolute inset-0 w-full h-full opacity-0">立即詢價</button>
         </div>
       </div>
-    </section>
+      </section>
+
     <section id="faq" class="mx-auto max-w-6xl px-4 py-12">
-      <div class="glass rounded-[3rem] p-8 md:p-12">
+      <div class="glass rounded-[3rem] p-8 md:p-12 border-[#D4AF37]/10">
         <h2 class="text-3xl font-bold mb-10 text-center">常見問題</h2>
         <div class="grid md:grid-cols-2 gap-4">
           <details class="bg-white/5 ringline rounded-2xl p-6 group">
-            <summary class="cursor-pointer font-bold list-none flex justify-between items-center">
+            <summary class="cursor-pointer font-bold list-none flex justify-between items-center text-white/90">
               預算有限能有氛圍嗎？
               <span class="text-[#D4AF37] group-open:rotate-180 transition-transform">↓</span>
             </summary>
-            <p class="mt-4 text-sm text-white/60 leading-relaxed border-t border-white/5 pt-4">
-              可以。我們將資源集中在視覺焦點與味蕾體驗，用精巧設計創造最大體感。
+            <p class="mt-4 text-sm text-white/50 leading-relaxed border-t border-white/5 pt-4">
+              可以。我們集中資源於視覺焦點與味蕾體驗，創造最大體感。
             </p>
           </details>
           <details class="bg-white/5 ringline rounded-2xl p-6 group">
-            <summary class="cursor-pointer font-bold list-none flex justify-between items-center">
+            <summary class="cursor-pointer font-bold list-none flex justify-between items-center text-white/90">
               可以只訂餐不含佈置嗎？
               <span class="text-[#D4AF37] group-open:rotate-180 transition-transform">↓</span>
             </summary>
-            <p class="mt-4 text-sm text-white/60 leading-relaxed border-t border-white/5 pt-4">
-              可以。提供輕量佈置方案，保留基礎桌面層次，讓預算更聚焦於食材本身。
+            <p class="mt-4 text-sm text-white/50 leading-relaxed border-t border-white/5 pt-4">
+              可以。保留基礎桌面層次，讓預算更聚焦於食材本身。
             </p>
           </details>
           <details class="bg-white/5 ringline rounded-2xl p-6 group">
-            <summary class="cursor-pointer font-bold list-none flex justify-between items-center">
+            <summary class="cursor-pointer font-bold list-none flex justify-between items-center text-white/90">
               建議提前多久預約？
               <span class="text-[#D4AF37] group-open:rotate-180 transition-transform">↓</span>
             </summary>
-            <p class="mt-4 text-sm text-white/60 leading-relaxed border-t border-white/5 pt-4">
-              春酒為旺季，建議確認日期後立即聯繫。建議至少提前 1 個月以利場勘。
+            <p class="mt-4 text-sm text-white/50 leading-relaxed border-t border-white/5 pt-4">
+              建議確認日期後立即聯繫。至少提前 1 個月以利場勘。
             </p>
           </details>
           <details class="bg-white/5 ringline rounded-2xl p-6 group">
-            <summary class="cursor-pointer font-bold list-none flex justify-between items-center">
+            <summary class="cursor-pointer font-bold list-none flex justify-between items-center text-white/90">
               是否支援辦公大樓？
               <span class="text-[#D4AF37] group-open:rotate-180 transition-transform">↓</span>
             </summary>
-            <p class="mt-4 text-sm text-white/60 leading-relaxed border-t border-white/5 pt-4">
-              專業支援。包含備餐區規劃與廢棄物處理，確保聚會不影響辦公環境。
+            <p class="mt-4 text-sm text-white/50 leading-relaxed border-t border-white/5 pt-4">
+              專業支援。包含備餐規劃與廢棄物處理，不影響辦公環境。
             </p>
           </details>
         </div>
@@ -336,14 +334,14 @@
       <div class="grid md:grid-cols-12 gap-8 items-start">
         <div class="md:col-span-5">
           <h2 class="text-3xl font-bold">立即詢價</h2>
-          <p class="text-white/60 mt-4 leading-relaxed">
-            留下需求，我們將提供專屬企劃案，<br/>
+          <p class="text-white/40 mt-4 leading-relaxed">
+            留下需求，我們將提供專屬企劃，<br/>
             為您的團隊打造最有溫度的盛宴。
           </p>
 
-          <div class="mt-8 glass rounded-3xl p-8">
-            <div class="text-sm font-bold text-[#D4AF37] mb-4">詢價後流程</div>
-            <ul class="space-y-4 text-sm text-white/70">
+          <div class="mt-8 glass rounded-3xl p-8 border-[#D4AF37]/10">
+            <div class="text-sm font-bold text-[#D4AF37] mb-4 uppercase tracking-widest">Inquiry Process</div>
+            <ul class="space-y-4 text-sm text-white/60">
               <li class="flex items-start gap-3">• 24hr 內提供初步風格提案</li>
               <li class="flex items-start gap-3">• 透明的預算參考區間</li>
               <li class="flex items-start gap-3">• 專人實地場勘規劃</li>
@@ -352,22 +350,22 @@
         </div>
 
         <div class="md:col-span-7">
-          <div class="glass rounded-[2.5rem] p-8 md:p-10 soft-shadow">
+          <div class="glass rounded-[2.5rem] p-8 md:p-10 soft-shadow border-[#D4AF37]/20">
             <form id="inquiryForm" class="space-y-5">
               <div class="grid md:grid-cols-2 gap-4">
                 <div>
-                  <label class="text-xs text-white/50 uppercase tracking-widest font-bold">聯絡姓名</label>
+                  <label class="text-[10px] text-white/40 uppercase tracking-widest font-bold">聯絡姓名</label>
                   <input class="input mt-2 w-full rounded-xl px-5 py-4" name="name" required placeholder="您的稱呼" />
                 </div>
                 <div>
-                  <label class="text-xs text-white/50 uppercase tracking-widest font-bold">聯絡電話</label>
+                  <label class="text-[10px] text-white/40 uppercase tracking-widest font-bold">聯絡電話</label>
                   <input class="input mt-2 w-full rounded-xl px-5 py-4" name="phone" required placeholder="手機或分機" />
                 </div>
               </div>
 
               <div class="grid md:grid-cols-2 gap-4">
                 <div>
-                  <label class="text-xs text-white/50 uppercase tracking-widest font-bold">預算區間</label>
+                  <label class="text-[10px] text-white/40 uppercase tracking-widest font-bold">預算區間</label>
                   <select class="input mt-2 w-full rounded-xl px-5 py-4" name="budget" required>
                     <option value="" selected disabled>選擇規模</option>
                     <option>3萬以下</option>
@@ -379,7 +377,7 @@
                 </div>
 
                 <div>
-                  <label class="text-xs text-white/50 uppercase tracking-widest font-bold">活動類型</label>
+                  <label class="text-[10px] text-white/40 uppercase tracking-widest font-bold">活動類型</label>
                   <select class="input mt-2 w-full rounded-xl px-5 py-4" name="eventType" required>
                     <option value="" selected disabled>選擇類型</option>
                     <option>辦公室聚會</option>
@@ -391,9 +389,9 @@
               </div>
 
               <div>
-                <label class="text-xs text-white/50 uppercase tracking-widest font-bold">細節備註</label>
+                <label class="text-[10px] text-white/40 uppercase tracking-widest font-bold">細節備註</label>
                 <textarea class="input mt-2 w-full rounded-xl px-5 py-4 min-h-[100px]" name="note"
-                  placeholder="如：日期、人數或是否有特殊過敏需求。"></textarea>
+                  placeholder="如：日期、人數、特殊過敏需求。"></textarea>
               </div>
 
               <input type="hidden" name="page" value="spring-banquet-landing" />
@@ -402,7 +400,7 @@
               <input type="hidden" name="utm_campaign" id="utm_campaign" />
 
               <button id="submitBtn" type="submit"
-                class="btn w-full rounded-xl bg-white text-black px-4 py-5 font-black text-lg">
+                class="btn w-full rounded-xl bg-[#D4AF37] text-black px-4 py-5 font-black text-lg">
                 立即詢價
               </button>
 
@@ -415,17 +413,17 @@
   </main>
 
   <div class="md:hidden fixed bottom-6 left-0 right-0 z-50 px-6">
-    <a href="#form" class="btn block rounded-xl bg-white text-black text-center py-4 font-black soft-shadow">
+    <a href="#form" class="btn block rounded-xl bg-[#D4AF37] text-black text-center py-4 font-black soft-shadow">
       立即詢價
     </a>
   </div>
 
-  <footer class="mx-auto max-w-6xl px-4 pb-12 text-white/30 text-[10px] tracking-widest uppercase">
+  <footer class="mx-auto max-w-6xl px-4 pb-12 text-white/20 text-[9px] tracking-[0.2em] uppercase">
     <div class="divider mb-8"></div>
     <div class="flex flex-col md:flex-row items-center justify-between gap-6">
       <div>© MU ZEN TSAO 2026｜Catering & Decor</div>
-      <div class="flex gap-6">
-        <a href="mailto:admin_1@muzentsao.com">admin_1@muzentsao.com</a>
+      <div class="flex gap-8">
+        <a class="hover:text-[#D4AF37] transition-colors" href="mailto:admin_1@muzentsao.com">Contact Us</a>
       </div>
     </div>
   </footer>
