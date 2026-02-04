@@ -286,8 +286,7 @@
               商務空間的執行經驗？
               <span class="text-[#8B0000] group-open:rotate-180 transition-transform text-sm">↓</span>
             </summary>
-            <p class="mt-4 text-sm text-stone-500 font-light leading-loose border-t border-stone-200/30 pt-4">
-              團隊擁有豐富的企業大樓執行經驗，包含完善的清運服務，確保不影響貴司的日常作業環境。
+            <p class="mt-4 text-sm text-stone-500 font-light導致的日常作業環境。
             </p>
           </details>
         </div>
@@ -458,7 +457,22 @@
     </div>
   </footer>
 
+  <div class="fixed bottom-6 right-6 z-50 group">
+    <div class="absolute right-0 bottom-full mb-3 whitespace-nowrap bg-stone-900 text-white text-[10px] px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 tracking-[0.2em] font-medium pointer-events-none shadow-xl">
+      加入官方 LINE
+      <div class="absolute top-full right-5 border-4 border-transparent border-t-stone-900"></div>
+    </div>
+    
+    <div class="absolute inset-0 rounded-full bg-[#06C755] animate-ping opacity-20"></div>
+    
+    <a href="https://lin.ee/r0srTx1" target="_blank" rel="noopener" 
+       class="relative flex items-center justify-center w-14 h-14 bg-[#06C755] text-white rounded-full shadow-2xl hover:scale-110 transition-transform duration-300">
+      <i class="fa fa-comment text-2xl"></i>
+    </a>
+  </div>
+
   <script>
+    // 保留原始 JS 控制邏輯
     const params = new URLSearchParams(location.search);
     ["utm_source","utm_medium","utm_campaign"].forEach(k=>{
       const el = document.getElementById(k);
@@ -507,4 +521,3 @@
   </script>
 </body>
 </html>
-
