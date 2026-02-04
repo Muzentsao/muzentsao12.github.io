@@ -89,6 +89,7 @@
           <a class="hover:text-[#8B0000] transition-colors" href="#highlights">美學亮點</a>
           <a class="hover:text-[#8B0000] transition-colors" href="#process">訂製流程</a>
           <a class="hover:text-[#8B0000] transition-colors" href="#faq">預約須知</a>
+          <a class="hover:text-[#8B0000] transition-colors" href="#form">預約服務</a>
         </nav>
 
         <div class="flex items-center gap-2">
@@ -211,8 +212,6 @@
       </div>
     </section>
 
-    <section id="packages"></section>
-
     <section id="work" class="mx-auto max-w-6xl px-4 py-16">
       <div class="flex items-center justify-between mb-12">
         <div>
@@ -286,7 +285,8 @@
               商務空間的執行經驗？
               <span class="text-[#8B0000] group-open:rotate-180 transition-transform text-sm">↓</span>
             </summary>
-            <p class="mt-4 text-sm text-stone-500 font-light導致的日常作業環境。
+            <p class="mt-4 text-sm text-stone-500 font-light leading-loose border-t border-stone-200/30 pt-4">
+              團隊擁有豐富的企業大樓執行經驗，包含完善的清運服務，確保不影響貴司的日常作業環境。
             </p>
           </details>
         </div>
@@ -295,10 +295,6 @@
 
     <section id="form" class="mx-auto max-w-6xl px-4 pb-16 md:pb-24">
       <div class="grid md:grid-cols-12 gap-16 items-start">
-        <div class="md:col-span-12 text-center mb-0">
-          <h2 class="text-3xl font-light text-stone-900 tracking-[0.4em]"></h2>
-          <div class="h-px w-0 bg-[#8B0000] mx-auto mt-0 opacity-0"></div>
-        </div>
         <div class="md:col-span-12">
           <div class="bg-white border border-stone-50 rounded-[3rem] p-10 md:p-16 soft-shadow">
             <div class="text-center mb-16">
@@ -313,22 +309,22 @@
               <div class="grid md:grid-cols-2 gap-6">
                 <div>
                   <label class="text-xs text-stone-400 uppercase tracking-[0.2em] font-bold ml-1">姓名</label>
-                  <input class="input mt-3 w-full rounded-xl px-6 py-4 text-base" name="name" required placeholder="您的稱呼" />
+                  <input class="input mt-3 w-full rounded-xl px-6 py-4 text-base" id="name" name="name" required placeholder="您的稱呼" />
                 </div>
                 <div>
                   <label class="text-xs text-stone-400 uppercase tracking-[0.2em] font-bold ml-1">電話</label>
-                  <input class="input mt-3 w-full rounded-xl px-6 py-4 text-base" name="phone" required placeholder="手機或分機" />
+                  <input class="input mt-3 w-full rounded-xl px-6 py-4 text-base" id="phone" name="phone" required placeholder="手機或分機" />
                 </div>
               </div>
 
               <div class="grid md:grid-cols-2 gap-6">
                 <div>
                   <label class="text-xs text-stone-400 uppercase tracking-[0.2em] font-bold ml-1">預計活動日期</label>
-                  <input type="date" class="input mt-3 w-full rounded-xl px-6 py-4 text-base" name="eventDate" required />
+                  <input type="date" class="input mt-3 w-full rounded-xl px-6 py-4 text-base" id="date" name="eventDate" required />
                 </div>
                 <div>
                   <label class="text-xs text-stone-400 uppercase tracking-[0.2em] font-bold ml-1">預算範圍</label>
-                  <select class="input mt-3 w-full rounded-xl px-6 py-4 text-base appearance-none" name="budget" required>
+                  <select class="input mt-3 w-full rounded-xl px-6 py-4 text-base appearance-none" id="budget" name="budget" required>
                     <option value="" selected disabled>選擇預算規模</option>
                     <option>$50,000-$60,000</option>
                     <option>$60,000-70,000</option>
@@ -341,7 +337,7 @@
               <div class="grid md:grid-cols-1 gap-6">
                 <div>
                   <label class="text-xs text-stone-400 uppercase tracking-[0.2em] font-bold ml-1">活動類型</label>
-                  <select class="input mt-3 w-full rounded-xl px-6 py-4 text-base appearance-none" name="eventType" required>
+                  <select class="input mt-3 w-full rounded-xl px-6 py-4 text-base appearance-none" id="event-type" name="eventType" required>
                     <option value="" selected disabled>選擇活動性質</option>
                     <option>春酒慶典</option>
                     <option>家庭聚會</option>
@@ -354,7 +350,7 @@
 
               <div>
                 <label class="text-xs text-stone-400 uppercase tracking-[0.2em] font-bold ml-1">備註</label>
-                <textarea class="input mt-3 w-full rounded-xl px-6 py-4 min-h-[120px] text-base" name="note"
+                <textarea class="input mt-3 w-full rounded-xl px-6 py-4 min-h-[120px] text-base" id="message" name="note"
                   placeholder="請填寫其他特殊需求或建議。"></textarea>
               </div>
 
@@ -462,9 +458,7 @@
       加入官方 LINE
       <div class="absolute top-full right-5 border-4 border-transparent border-t-stone-900"></div>
     </div>
-    
     <div class="absolute inset-0 rounded-full bg-[#06C755] animate-ping opacity-20"></div>
-    
     <a href="https://lin.ee/r0srTx1" target="_blank" rel="noopener" 
        class="relative flex items-center justify-center w-14 h-14 bg-[#06C755] text-white rounded-full shadow-2xl hover:scale-110 transition-transform duration-300">
       <i class="fa fa-comment text-2xl"></i>
