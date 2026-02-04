@@ -61,7 +61,6 @@
     .img-slot img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1); }
     .img-slot:hover img { transform: scale(1.03); }
 
-    /* 局部光影技術 (Scrim)：確保文字閱讀性而不影響整體色調 */
     .img-scrim {
       background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 40%, transparent 100%);
       pointer-events: none;
@@ -74,23 +73,23 @@
 <body class="grad">
   <header class="sticky top-0 z-40">
     <div class="glass border-x-0 border-t-0">
-      <div class="mx-auto max-w-6xl px-4 py-5 flex items-center justify-between">
+      <div class="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
         <a href="#top" class="flex items-center gap-3">
-          <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-[#8B0000] text-white font-bold text-sm">木</span>
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#8B0000] text-white font-bold text-base">木</span>
           <div class="leading-tight">
-            <div class="font-bold tracking-[0.3em] text-[#1C1917] text-sm">木人艸</div>
-            <div class="text-[7px] text-[#8B0000] tracking-[0.4em] uppercase font-bold">Sensory Lab</div>
+            <div class="font-bold tracking-[0.3em] text-[#1C1917] text-base">木人艸</div>
+            <div class="text-[9px] text-[#8B0000] tracking-[0.4em] uppercase font-bold">Sensory Lab</div>
           </div>
         </a>
 
-        <nav class="hidden md:flex items-center gap-12 text-[10px] font-medium text-stone-400 uppercase tracking-[0.3em]">
+        <nav class="hidden md:flex items-center gap-10 text-sm font-medium text-stone-500 uppercase tracking-[0.2em]">
           <a class="hover:text-[#8B0000] transition-colors" href="#highlights">美學亮點</a>
           <a class="hover:text-[#8B0000] transition-colors" href="#process">訂製流程</a>
           <a class="hover:text-[#8B0000] transition-colors" href="#faq">預約須知</a>
         </nav>
 
         <div class="flex items-center gap-2">
-          <a href="#form" class="btn inline-flex items-center justify-center rounded-full bg-[#8B0000] text-white px-7 py-2 text-[10px] font-bold">
+          <a href="#form" class="btn inline-flex items-center justify-center rounded-full bg-[#8B0000] text-white px-8 py-2.5 text-xs font-bold">
             品味細節
           </a>
         </div>
@@ -99,58 +98,56 @@
   </header>
 
   <main id="top">
-    <section class="mx-auto max-w-6xl px-4 pt-16 pb-12 md:pt-28 md:pb-24">
+    <section class="mx-auto max-w-6xl px-4 pt-12 pb-10 md:pt-20 md:pb-16">
       <div class="grid md:grid-cols-12 gap-16 items-center">
         <div class="md:col-span-7">
-          <div class="inline-flex items-center gap-2 rounded-full badge px-5 py-1.5 text-[8px] font-bold uppercase tracking-[0.3em]">
-            <span class="h-1 w-1 rounded-full bg-[#8B0000]"></span>
+          <div class="inline-flex items-center gap-2 rounded-full badge px-5 py-2 text-[10px] font-bold uppercase tracking-[0.2em]">
+            <span class="h-1.5 w-1.5 rounded-full bg-[#8B0000]"></span>
             2026 Spring Collection
           </div>
 
-          <h1 class="mt-10 text-3xl md:text-4xl text-stone-900 tracking-[0.4em]">
+          <h1 class="mt-8 text-4xl md:text-5xl text-stone-900 tracking-[0.3em]">
             春序時光，<br />
             築一場<span class="text-[#8B0000]">藝境盛宴</span>。
           </h1>
 
-          <p class="mt-10 text-stone-400 text-base max-w-sm font-light leading-relaxed tracking-wide">
+          <p class="mt-8 text-stone-500 text-lg max-w-md font-light leading-loose tracking-wide">
             透過極簡策展與精緻餐食，為企業重新定義聚會的美學尺度。
           </p>
 
-          <div class="mt-12 flex flex-col sm:flex-row gap-6">
-            <a href="#form" class="btn inline-flex items-center justify-center rounded-full bg-[#8B0000] text-white px-10 py-4 font-bold text-xs">
+          <div class="mt-10 flex flex-col sm:flex-row gap-6">
+            <a href="#form" class="btn inline-flex items-center justify-center rounded-full bg-[#8B0000] text-white px-10 py-4.5 font-bold text-sm">
               開啟美學對話
             </a>
-            <a href="#highlights" class="btn inline-flex items-center justify-center rounded-full bg-white px-10 py-4 font-bold text-xs ringline text-stone-500">
+            <a href="#highlights" class="btn inline-flex items-center justify-center rounded-full bg-white px-10 py-4.5 font-bold text-sm ringline text-stone-500">
               探索精神
             </a>
           </div>
 
-          <div class="mt-24 grid grid-cols-3 gap-12 border-t border-stone-100 pt-12">
+          <div class="mt-20 grid grid-cols-3 gap-8 border-t border-stone-100 pt-10">
             <div>
-              <div class="text-[11px] font-bold text-stone-900 tracking-[0.3em]">全案策劃</div>
-              <div class="text-[8px] text-stone-300 mt-3 uppercase tracking-[0.4em]">Visual Direction</div>
+              <div class="text-sm font-bold text-stone-900 tracking-[0.2em]">全案策劃</div>
+              <div class="text-[10px] text-stone-400 mt-2 uppercase tracking-[0.3em]">Visual Direction</div>
             </div>
             <div>
-              <div class="text-[11px] font-bold text-stone-900 tracking-[0.3em]">極致留白</div>
-              <div class="text-[8px] text-stone-300 mt-3 uppercase tracking-[0.4em]">Negative Space</div>
+              <div class="text-sm font-bold text-stone-900 tracking-[0.2em]">極致留白</div>
+              <div class="text-[10px] text-stone-400 mt-2 uppercase tracking-[0.3em]">Negative Space</div>
             </div>
             <div>
-              <div class="text-[11px] font-bold text-stone-900 tracking-[0.3em]">旬味編織</div>
-              <div class="text-[8px] text-stone-300 mt-3 uppercase tracking-[0.4em]">Taste Curation</div>
+              <div class="text-sm font-bold text-stone-900 tracking-[0.2em]">旬味編織</div>
+              <div class="text-[10px] text-stone-400 mt-2 uppercase tracking-[0.3em]">Taste Curation</div>
             </div>
           </div>
         </div>
 
         <div class="md:col-span-5">
           <div class="bg-white soft-shadow rounded-[3.5rem] p-3 h-full overflow-hidden">
-              <div class="img-slot w-full h-[500px] md:h-full min-h-[650px]">
+              <div class="img-slot w-full h-[500px] md:h-full min-h-[600px]">
                 <img src="S__59924488_0.jpg" alt="hero" />
-                
                 <div class="absolute inset-0 img-scrim"></div>
-                
                 <div class="absolute bottom-12 left-12 right-12 z-10">
-                   <div class="text-[8px] text-white/90 uppercase tracking-[0.6em] font-bold mb-4">ATMOSPHERE</div>
-                   <div class="text-xl font-medium text-white tracking-[0.3em] drop-shadow-sm">感官場域執演</div>
+                   <div class="text-[9px] text-white/90 uppercase tracking-[0.5em] font-bold mb-3">ATMOSPHERE</div>
+                   <div class="text-xl font-medium text-white tracking-[0.2em] drop-shadow-sm">感官場域執演</div>
                 </div>
               </div>
           </div>
@@ -158,54 +155,54 @@
       </div>
     </section>
 
-    <section id="highlights" class="mx-auto max-w-6xl px-4 py-24 bg-white">
-      <div class="text-center mb-20">
-        <h2 class="text-2xl font-light tracking-[0.5em] text-stone-900">美學亮點</h2>
-        <div class="h-px w-8 bg-[#8B0000] mx-auto mt-8 opacity-40"></div>
+    <section id="highlights" class="mx-auto max-w-6xl px-4 py-16 bg-white">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-light tracking-[0.4em] text-stone-900">美學亮點</h2>
+        <div class="h-px w-10 bg-[#8B0000] mx-auto mt-6 opacity-30"></div>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-16">
+      <div class="grid md:grid-cols-3 gap-12">
         <div class="text-center">
-          <div class="text-stone-100 text-6xl mb-8 font-serif italic">01</div>
-          <h3 class="font-bold text-stone-900 text-sm mb-5 tracking-[0.3em]">空間敘事</h3>
-          <p class="text-[13px] text-stone-400 font-light leading-loose">以花藝與光影築構呼吸感，將場域化作流動的藝術森林。</p>
+          <div class="text-stone-100 text-6xl mb-6 font-serif italic">01</div>
+          <h3 class="font-bold text-stone-900 text-base mb-4 tracking-[0.2em]">空間敘事</h3>
+          <p class="text-base text-stone-500 font-light leading-relaxed">以花藝與光影築構呼吸感，將場域化作流動的藝術森林。</p>
         </div>
         <div class="text-center">
-          <div class="text-stone-100 text-6xl mb-8 font-serif italic">02</div>
-          <h3 class="font-bold text-stone-900 text-sm mb-5 tracking-[0.3em]">味蕾編織</h3>
-          <p class="text-[13px] text-stone-400 font-light leading-loose">嚴選旬味精研鹹甜比例，將食藝轉化為席間的感官風景。</p>
+          <div class="text-stone-100 text-6xl mb-6 font-serif italic">02</div>
+          <h3 class="font-bold text-stone-900 text-base mb-4 tracking-[0.2em]">味蕾編織</h3>
+          <p class="text-base text-stone-500 font-light leading-relaxed">嚴選旬味精研鹹甜比例，將食藝轉化為席間的感官風景。</p>
         </div>
         <div class="text-center">
-          <div class="text-stone-100 text-6xl mb-8 font-serif italic">03</div>
-          <h3 class="font-bold text-stone-900 text-sm mb-5 tracking-[0.3em]">無感執行</h3>
-          <p class="text-[13px] text-stone-400 font-light leading-loose">專業團隊全權執導，確保從備餐到撤場皆優雅而不留痕跡。</p>
+          <div class="text-stone-100 text-6xl mb-6 font-serif italic">03</div>
+          <h3 class="font-bold text-stone-900 text-base mb-4 tracking-[0.2em]">無感執行</h3>
+          <p class="text-base text-stone-500 font-light leading-relaxed">專業團隊全權執導，確保從備餐到撤場皆優雅而不留痕跡。</p>
         </div>
       </div>
     </section>
 
-    <section id="process" class="mx-auto max-w-6xl px-4 py-24">
-      <div class="bg-stone-50 rounded-[4rem] p-12 md:p-20 border border-stone-100">
-        <h2 class="text-2xl font-light mb-20 text-stone-900 tracking-[0.4em]">訂製流程</h2>
-        <div class="grid md:grid-cols-4 gap-12">
+    <section id="process" class="mx-auto max-w-6xl px-4 py-16">
+      <div class="bg-stone-50 rounded-[3rem] p-10 md:p-16 border border-stone-100">
+        <h2 class="text-3xl font-light mb-12 text-stone-900 tracking-[0.3em]">訂製流程</h2>
+        <div class="grid md:grid-cols-4 gap-10">
           <div>
-            <div class="text-[#8B0000] font-bold mb-5 text-[9px] tracking-[0.4em] uppercase">Phase 01</div>
-            <div class="font-bold text-stone-900 mb-4 text-sm tracking-widest">靈感洽談</div>
-            <p class="text-[12px] text-stone-400 font-light">定義活動願景與空間個性。</p>
+            <div class="text-[#8B0000] font-bold mb-4 text-xs tracking-[0.3em] uppercase">Phase 01</div>
+            <div class="font-bold text-stone-900 mb-3 text-base tracking-widest">靈感洽談</div>
+            <p class="text-sm text-stone-500 font-light">定義活動願景與空間個性。</p>
           </div>
           <div>
-            <div class="text-[#8B0000] font-bold mb-5 text-[9px] tracking-[0.4em] uppercase">Phase 02</div>
-            <div class="font-bold text-stone-900 mb-4 text-sm tracking-widest">美學提案</div>
-            <p class="text-[12px] text-stone-400 font-light">提供客製化食藝與佈置藍圖。</p>
+            <div class="text-[#8B0000] font-bold mb-4 text-xs tracking-[0.3em] uppercase">Phase 02</div>
+            <div class="font-bold text-stone-900 mb-3 text-base tracking-widest">美學提案</div>
+            <p class="text-sm text-stone-500 font-light">提供客製化食藝與佈置藍圖。</p>
           </div>
           <div>
-            <div class="text-[#8B0000] font-bold mb-5 text-[9px] tracking-[0.4em] uppercase">Phase 03</div>
-            <div class="font-bold text-stone-900 mb-4 text-sm tracking-widest">場域調研</div>
-            <p class="text-[12px] text-stone-400 font-light">實地走訪確認執演各項細節。</p>
+            <div class="text-[#8B0000] font-bold mb-4 text-xs tracking-[0.3em] uppercase">Phase 03</div>
+            <div class="font-bold text-stone-900 mb-3 text-base tracking-widest">場域調研</div>
+            <p class="text-sm text-stone-500 font-light">實地走訪確認執演各項細節。</p>
           </div>
           <div>
-            <div class="text-[#8B0000] font-bold mb-5 text-[9px] tracking-[0.4em] uppercase">Phase 04</div>
-            <div class="font-bold text-stone-900 mb-4 text-sm tracking-widest">盛宴執演</div>
-            <p class="text-[12px] text-stone-400 font-light">專業團隊現場完美演繹。</p>
+            <div class="text-[#8B0000] font-bold mb-4 text-xs tracking-[0.3em] uppercase">Phase 04</div>
+            <div class="font-bold text-stone-900 mb-3 text-base tracking-widest">盛宴執演</div>
+            <p class="text-sm text-stone-500 font-light">專業團隊現場完美演繹。</p>
           </div>
         </div>
       </div>
@@ -213,17 +210,17 @@
 
     <section id="packages"></section>
 
-    <section class="mx-auto max-w-6xl px-4 py-24">
-      <div class="flex items-center justify-between mb-20">
+    <section class="mx-auto max-w-6xl px-4 py-16">
+      <div class="flex items-center justify-between mb-12">
         <div>
-          <h2 class="text-2xl font-light tracking-[0.4em] text-stone-900">美學實績</h2>
-          <p class="text-stone-400 mt-6 text-sm max-w-md font-light tracking-wide">
+          <h2 class="text-3xl font-light tracking-[0.3em] text-stone-900">美學實績</h2>
+          <p class="text-stone-500 mt-6 text-base max-w-xl font-light tracking-wide">
             每一場宴席皆為獨特的視覺策展。透過客製化佈置與食藝，我們將企業精神注入場域。
           </p>
         </div>
       </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
         <div class="img-slot aspect-[4/5] soft-shadow">
           <img src="S__59924486_0.jpg" alt="work-01" />
           <button onclick="location.href='#form'" class="absolute inset-0 w-full h-full opacity-0">洽詢風格</button>
@@ -250,43 +247,43 @@
         </div>
       </div>
     </section>
-    <section id="faq" class="mx-auto max-w-6xl px-4 py-24">
-      <div class="bg-white rounded-[4rem] p-12 md:p-20 border border-stone-100 soft-shadow">
-        <h2 class="text-2xl font-light mb-20 text-center text-stone-900 tracking-[0.4em]">預約須知</h2>
-        <div class="grid md:grid-cols-2 gap-8">
-          <details class="bg-stone-50/50 rounded-3xl p-8 group transition-all duration-300">
-            <summary class="cursor-pointer font-bold list-none flex justify-between items-center text-stone-700 text-sm tracking-widest">
+    <section id="faq" class="mx-auto max-w-6xl px-4 py-16">
+      <div class="bg-white rounded-[3rem] p-10 md:p-16 border border-stone-100 soft-shadow">
+        <h2 class="text-3xl font-light mb-12 text-center text-stone-900 tracking-[0.3em]">預約須知</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <details class="bg-stone-50/50 rounded-2xl p-6 group transition-all duration-300">
+            <summary class="cursor-pointer font-bold list-none flex justify-between items-center text-stone-700 text-base tracking-widest">
               關於美學氛圍的掌握？
-              <span class="text-[#8B0000] group-open:rotate-180 transition-transform text-xs">↓</span>
+              <span class="text-[#8B0000] group-open:rotate-180 transition-transform text-sm">↓</span>
             </summary>
-            <p class="mt-6 text-xs text-stone-400 font-light leading-loose border-t border-stone-200/30 pt-6">
+            <p class="mt-4 text-sm text-stone-500 font-light leading-loose border-t border-stone-200/30 pt-4">
               木人艸擅長精準配比美學焦點，即便是極簡規模，也能透過層次化的佈置營造高端質感。
             </p>
           </details>
-          <details class="bg-stone-50/50 rounded-3xl p-8 group transition-all duration-300">
-            <summary class="cursor-pointer font-bold list-none flex justify-between items-center text-stone-700 text-sm tracking-widest">
+          <details class="bg-stone-50/50 rounded-2xl p-6 group transition-all duration-300">
+            <summary class="cursor-pointer font-bold list-none flex justify-between items-center text-stone-700 text-base tracking-widest">
               是否支援品牌客製化？
-              <span class="text-[#8B0000] group-open:rotate-180 transition-transform text-xs">↓</span>
+              <span class="text-[#8B0000] group-open:rotate-180 transition-transform text-sm">↓</span>
             </summary>
-            <p class="mt-6 text-xs text-stone-400 font-light leading-loose border-t border-stone-200/30 pt-6">
+            <p class="mt-4 text-sm text-stone-500 font-light leading-loose border-t border-stone-200/30 pt-4">
               我們可以針對品牌色調進行花藝與桌面佈置的深度調整，構築具備一致性的視覺語彙。
             </p>
           </details>
-          <details class="bg-stone-50/50 rounded-3xl p-8 group transition-all duration-300">
-            <summary class="cursor-pointer font-bold list-none flex justify-between items-center text-stone-700 text-sm tracking-widest">
+          <details class="bg-stone-50/50 rounded-2xl p-6 group transition-all duration-300">
+            <summary class="cursor-pointer font-bold list-none flex justify-between items-center text-stone-700 text-base tracking-widest">
               建議的預約時程？
-              <span class="text-[#8B0000] group-open:rotate-180 transition-transform text-xs">↓</span>
+              <span class="text-[#8B0000] group-open:rotate-180 transition-transform text-sm">↓</span>
             </summary>
-            <p class="mt-6 text-xs text-stone-400 font-light leading-loose border-t border-stone-200/30 pt-6">
+            <p class="mt-4 text-sm text-stone-500 font-light leading-loose border-t border-stone-200/30 pt-4">
               為了確保食藝鮮度與佈置細節，建議至少提前 1 個月進行初步洽談與現場調研。
             </p>
           </details>
-          <details class="bg-stone-50/50 rounded-3xl p-8 group transition-all duration-300">
-            <summary class="cursor-pointer font-bold list-none flex justify-between items-center text-stone-700 text-sm tracking-widest">
+          <details class="bg-stone-50/50 rounded-2xl p-6 group transition-all duration-300">
+            <summary class="cursor-pointer font-bold list-none flex justify-between items-center text-stone-700 text-base tracking-widest">
               商務空間的執行經驗？
-              <span class="text-[#8B0000] group-open:rotate-180 transition-transform text-xs">↓</span>
+              <span class="text-[#8B0000] group-open:rotate-180 transition-transform text-sm">↓</span>
             </summary>
-            <p class="mt-6 text-xs text-stone-400 font-light leading-loose border-t border-stone-200/30 pt-6">
+            <p class="mt-4 text-sm text-stone-500 font-light leading-loose border-t border-stone-200/30 pt-4">
               團隊擁有豐富的企業大樓執行經驗，包含完善的清運服務，確保不影響貴司的日常作業環境。
             </p>
           </details>
@@ -294,17 +291,17 @@
       </div>
     </section>
 
-    <section id="form" class="mx-auto max-w-6xl px-4 pb-28 md:pb-36">
+    <section id="form" class="mx-auto max-w-6xl px-4 pb-16 md:pb-24">
       <div class="grid md:grid-cols-12 gap-16 items-start">
         <div class="md:col-span-5">
-          <h2 class="text-2xl font-light text-stone-900 tracking-[0.4em]">索取提案</h2>
-          <p class="text-stone-400 mt-8 leading-loose font-light text-sm tracking-wide">
+          <h2 class="text-3xl font-light text-stone-900 tracking-[0.3em]">索取提案</h2>
+          <p class="text-stone-500 mt-8 leading-loose font-light text-base tracking-wide">
             開啟您的美學訂製之旅。策展團隊將於 24 小時內提供初步企劃與價值分析建議。
           </p>
 
-          <div class="mt-16 bg-white border border-stone-100 rounded-[3rem] p-10 soft-shadow">
-            <div class="text-[9px] font-bold text-[#8B0000] mb-8 uppercase tracking-[0.5em]">Inquiry Protocol</div>
-            <ul class="space-y-7 text-[11px] text-stone-400 font-light tracking-[0.2em]">
+          <div class="mt-12 bg-white border border-stone-100 rounded-[2.5rem] p-10 soft-shadow">
+            <div class="text-xs font-bold text-[#8B0000] mb-6 uppercase tracking-[0.4em]">Inquiry Protocol</div>
+            <ul class="space-y-6 text-sm text-stone-400 font-light tracking-[0.1em]">
               <li class="flex items-start gap-4">• 初步視覺提案與概念圖譜</li>
               <li class="flex items-start gap-4">• 透明化報價與價值分析表</li>
               <li class="flex items-start gap-4">• 專屬策展經理實地調研</li>
@@ -313,23 +310,23 @@
         </div>
 
         <div class="md:col-span-7">
-          <div class="bg-white border border-stone-50 rounded-[3.5rem] p-10 md:p-16 soft-shadow">
-            <form id="inquiryForm" class="space-y-10">
-              <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white border border-stone-50 rounded-[3rem] p-10 md:p-14 soft-shadow">
+            <form id="inquiryForm" class="space-y-8">
+              <div class="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label class="text-[9px] text-stone-300 uppercase tracking-[0.3em] font-bold ml-1">聯絡姓名</label>
-                  <input class="input mt-4 w-full rounded-2xl px-6 py-5 text-sm" name="name" required placeholder="您的稱呼" />
+                  <label class="text-xs text-stone-400 uppercase tracking-[0.2em] font-bold ml-1">聯絡姓名</label>
+                  <input class="input mt-3 w-full rounded-xl px-6 py-4 text-base" name="name" required placeholder="您的稱呼" />
                 </div>
                 <div>
-                  <label class="text-[9px] text-stone-300 uppercase tracking-[0.3em] font-bold ml-1">聯絡電話</label>
-                  <input class="input mt-4 w-full rounded-2xl px-6 py-5 text-sm" name="phone" required placeholder="手機或分機" />
+                  <label class="text-xs text-stone-400 uppercase tracking-[0.2em] font-bold ml-1">聯絡電話</label>
+                  <input class="input mt-3 w-full rounded-xl px-6 py-4 text-base" name="phone" required placeholder="手機或分機" />
                 </div>
               </div>
 
-              <div class="grid md:grid-cols-2 gap-8">
+              <div class="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label class="text-[9px] text-stone-300 uppercase tracking-[0.3em] font-bold ml-1">預算區間</label>
-                  <select class="input mt-4 w-full rounded-2xl px-6 py-5 text-sm appearance-none" name="budget" required>
+                  <label class="text-xs text-stone-400 uppercase tracking-[0.2em] font-bold ml-1">預算區間</label>
+                  <select class="input mt-3 w-full rounded-xl px-6 py-4 text-base appearance-none" name="budget" required>
                     <option value="" selected disabled>活動預算規模</option>
                     <option>3萬以下</option>
                     <option>3–6萬</option>
@@ -340,8 +337,8 @@
                 </div>
 
                 <div>
-                  <label class="text-[9px] text-stone-300 uppercase tracking-[0.3em] font-bold ml-1">活動類型</label>
-                  <select class="input mt-4 w-full rounded-2xl px-6 py-5 text-sm appearance-none" name="eventType" required>
+                  <label class="text-xs text-stone-400 uppercase tracking-[0.2em] font-bold ml-1">活動類型</label>
+                  <select class="input mt-3 w-full rounded-xl px-6 py-4 text-base appearance-none" name="eventType" required>
                     <option value="" selected disabled>選擇活動性質</option>
                     <option>商務小聚</option>
                     <option>品牌發布</option>
@@ -352,8 +349,8 @@
               </div>
 
               <div>
-                <label class="text-[9px] text-stone-300 uppercase tracking-[0.3em] font-bold ml-1">細節備註</label>
-                <textarea class="input mt-4 w-full rounded-2xl px-6 py-5 min-h-[140px] text-sm" name="note"
+                <label class="text-xs text-stone-400 uppercase tracking-[0.2em] font-bold ml-1">細節備註</label>
+                <textarea class="input mt-3 w-full rounded-xl px-6 py-4 min-h-[120px] text-base" name="note"
                   placeholder="請簡述您的活動日期、人數或特殊的感官偏好。"></textarea>
               </div>
 
@@ -363,11 +360,11 @@
               <input type="hidden" name="utm_campaign" id="utm_campaign" />
 
               <button id="submitBtn" type="submit"
-                class="btn w-full rounded-2xl bg-[#8B0000] text-white px-6 py-6 font-bold text-xs shadow-xl shadow-red-900/5 uppercase tracking-[0.3em]">
+                class="btn w-full rounded-xl bg-[#8B0000] text-white px-6 py-5 font-bold text-sm shadow-xl shadow-red-900/5 uppercase tracking-[0.2em]">
                 開啟美學訂製
               </button>
 
-              <p id="formMsg" class="text-xs text-center hidden tracking-widest font-medium"></p>
+              <p id="formMsg" class="text-sm text-center hidden tracking-widest font-medium"></p>
             </form>
           </div>
         </div>
@@ -376,13 +373,13 @@
   </main>
 
   <div class="md:hidden fixed bottom-8 left-0 right-0 z-50 px-8">
-    <a href="#form" class="btn block rounded-2xl bg-[#8B0000] text-white text-center py-5 font-bold shadow-2xl text-[11px] tracking-[0.3em]">
+    <a href="#form" class="btn block rounded-2xl bg-[#8B0000] text-white text-center py-5 font-bold shadow-2xl text-xs tracking-[0.2em]">
       開啟預約提案
     </a>
   </div>
 
-  <footer class="mx-auto max-w-6xl px-4 pb-16 text-stone-300 text-[8px] tracking-[0.5em] uppercase">
-    <div class="divider mb-12 opacity-20"></div>
+  <footer class="mx-auto max-w-6xl px-4 pb-12 text-stone-300 text-[10px] tracking-[0.3em] uppercase">
+    <div class="divider mb-10 opacity-20"></div>
     <div class="flex flex-col md:flex-row items-center justify-between gap-8">
       <div>© MU ZEN TSAO 2026｜Catering Aesthetic Design</div>
       <div class="flex gap-12">
@@ -440,5 +437,3 @@
   </script>
 </body>
 </html>
-
-
