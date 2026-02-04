@@ -16,12 +16,13 @@
 
   <style>
     :root{
+      /* 減法美學核心：純白背景與極簡比例 */
       --bg:#FFFFFF; 
       --card:#FFFFFF;
       --line:rgba(128,0,32,0.06);
-      --text:#1C1917; 
-      --muted:#A8A29E; 
-      --accent:#8B0000; 
+      --text:#1C1917; /* Stone-900 */
+      --muted:#A8A29E; /* Stone-400 */
+      --accent:#8B0000; /* 經典酒紅：僅作為點綴色 */
       scroll-behavior: smooth;
     }
     body{ 
@@ -35,7 +36,9 @@
     .soft-shadow{ box-shadow: 0 10px 40px rgba(0,0,0,0.03); }
     .ringline{ outline: 1px solid rgba(139,0,0,0.1); outline-offset: 0; }
     
-    .grad { background: #FFFFFF; }
+    .grad {
+      background: #FFFFFF;
+    }
     
     .badge{ border:1px solid rgba(139,0,0,0.15); color: var(--accent) !important; background: transparent; }
     .btn{
@@ -208,6 +211,8 @@
       </div>
     </section>
 
+    <section id="packages"></section>
+
     <section id="work" class="mx-auto max-w-6xl px-4 py-16">
       <div class="flex items-center justify-between mb-12">
         <div>
@@ -291,6 +296,10 @@
 
     <section id="form" class="mx-auto max-w-6xl px-4 pb-16 md:pb-24">
       <div class="grid md:grid-cols-12 gap-16 items-start">
+        <div class="md:col-span-12 text-center mb-12">
+          <h2 class="text-3xl font-light text-stone-900 tracking-[0.4em]">預約服務</h2>
+          <div class="h-px w-10 bg-[#8B0000] mx-auto mt-6 opacity-30"></div>
+        </div>
         <div class="md:col-span-12">
           <div class="bg-white border border-stone-50 rounded-[3rem] p-10 md:p-14 soft-shadow">
             <form id="inquiryForm" class="space-y-8">
