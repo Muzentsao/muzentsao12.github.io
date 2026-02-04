@@ -9,6 +9,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -22,6 +23,7 @@
       --text:#1C1917; /* Stone-900 */
       --muted:#A8A29E; /* Stone-400 */
       --accent:#8B0000; /* 經典酒紅：僅作為點綴色 */
+      scroll-behavior: smooth;
     }
     body{ 
       font-family:"Noto Sans TC", system-ui, -apple-system, sans-serif; 
@@ -295,63 +297,18 @@
     <section id="form" class="mx-auto max-w-6xl px-4 pb-16 md:pb-24">
       <div class="grid md:grid-cols-12 gap-16 items-start">
         <div class="md:col-span-5">
-          <h2 class="text-3xl font-light text-stone-900 tracking-[0.3em]">聯絡我們</h2>
+          <h2 class="text-3xl font-light text-stone-900 tracking-[0.3em]">索取提案</h2>
           <p class="text-stone-500 mt-8 leading-loose font-light text-base tracking-wide">
             開啟您的美學訂製之旅。策展團隊將於 24 小時內提供初步企劃與價值分析建議。
           </p>
 
-          <div class="mt-12 bg-[#8B0000] text-white rounded-[2.5rem] p-10 soft-shadow">
-            <div class="space-y-6">
-              <div class="flex items-start">
-                <div class="mt-1 mr-4 w-8 h-8 bg-white/20 rounded-full flex items-center justify-center shrink-0">
-                  <i class="fa fa-phone"></i>
-                </div>
-                <div>
-                  <h3 class="font-semibold mb-1">電話諮詢</h3>
-                  <p class="opacity-90"><a href="tel:+886228832113" class="underline underline-offset-4">(02) 2883-2113</a></p>
-                </div>
-              </div>
-
-              <div class="flex items-start">
-                <div class="mt-1 mr-4 w-8 h-8 bg-white/20 rounded-full flex items-center justify-center shrink-0">
-                  <i class="fa fa-envelope"></i>
-                </div>
-                <div>
-                  <h3 class="font-semibold mb-1">電子郵件</h3>
-                  <p class="opacity-90"><a href="mailto:muzentsao@muzentsao.com" class="underline underline-offset-4">muzentsao@muzentsao.com</a></p>
-                </div>
-              </div>
-
-              <div class="flex items-start">
-                <div class="mt-1 mr-4 w-8 h-8 bg-white/20 rounded-full flex items-center justify-center shrink-0">
-                  <i class="fa fa-clock-o"></i>
-                </div>
-                <div>
-                  <h3 class="font-semibold mb-1">服務時間</h3>
-                  <p class="opacity-90">週一至週五 9:00–18:00</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="mt-12">
-              <h3 class="font-semibold mb-4 tracking-widest uppercase text-xs opacity-70">關注我們</h3>
-              <div class="flex space-x-4">
-                <a href="https://www.facebook.com/muzentsao/?locale=zh_TW" target="_blank" rel="noopener"
-                   class="w-10 h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-colors" aria-label="Facebook">
-                  <i class="fa fa-facebook-square"></i>
-                </a>
-                <a href="https://www.instagram.com/muzentsaocatering/" target="_blank" rel="noopener"
-                   class="w-10 h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-colors" aria-label="Instagram">
-                  <i class="fa fa-instagram"></i>
-                </a>
-                <a href="https://lin.ee/GDoyPqd"
-                   onclick="try{window.location='line://ti/p/@muzentsao'; setTimeout(function(){window.open('https://lin.ee/GDoyPqd','_blank');},700);}catch(e){}"
-                   target="_blank" rel="noopener"
-                   class="w-10 h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-colors" aria-label="LINE">
-                  <i class="fa fa-comment"></i>
-                </a>
-              </div>
-            </div>
+          <div class="mt-12 bg-white border border-stone-100 rounded-[2.5rem] p-10 soft-shadow">
+            <div class="text-xs font-bold text-[#8B0000] mb-6 uppercase tracking-[0.4em]">Inquiry Protocol</div>
+            <ul class="space-y-6 text-sm text-stone-400 font-light tracking-[0.1em]">
+              <li class="flex items-start gap-4">• 初步視覺提案與概念圖譜</li>
+              <li class="flex items-start gap-4">• 透明化報價與價值分析表</li>
+              <li class="flex items-start gap-4">• 專屬策展經理實地調研</li>
+            </ul>
           </div>
         </div>
 
@@ -424,17 +381,97 @@
     </a>
   </div>
 
-  <footer class="mx-auto max-w-6xl px-4 pb-12 text-stone-300 text-[10px] tracking-[0.3em] uppercase">
-    <div class="divider mb-10 opacity-20"></div>
-    <div class="flex flex-col md:flex-row items-center justify-between gap-8">
-      <div>© MU ZEN TSAO 2026｜Catering Aesthetic Design</div>
-      <div class="flex gap-12">
-        <a class="hover:text-[#8B0000] transition-colors" href="mailto:muzentsao@muzentsao.com">Contact Us</a>
+  <footer class="bg-[#8B0000] text-white pt-16 pb-12">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        <div class="col-span-1 md:col-span-1">
+          <a href="#top" class="flex items-center gap-3 mb-6">
+            <span class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-white text-[#8B0000] font-bold text-lg">木</span>
+            <div class="leading-tight">
+              <div class="font-bold tracking-[0.3em] text-white text-base">木人艸</div>
+              <div class="text-[9px] text-white/70 tracking-[0.4em] uppercase font-bold">Sensory Lab</div>
+            </div>
+          </a>
+          <p class="text-sm text-white/70 leading-relaxed font-light tracking-wide">
+            以極簡美學策劃感官饗宴。我們在食藝、花藝與空間之間尋找平衡，為品牌創造具備深度價值的策展式外燴服務。
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold tracking-[0.3em] mb-6 uppercase text-white/90">快速連結</h4>
+          <ul class="space-y-4 text-sm text-white/60 font-light">
+            <li><a href="#top" class="hover:text-white transition-colors">回到頂端</a></li>
+            <li><a href="#highlights" class="hover:text-white transition-colors">美學亮點</a></li>
+            <li><a href="#process" class="hover:text-white transition-colors">訂製流程</a></li>
+            <li><a href="#faq" class="hover:text-white transition-colors">預約須知</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold tracking-[0.3em] mb-6 uppercase text-white/90">策劃項目</h4>
+          <ul class="space-y-4 text-sm text-white/60 font-light">
+            <li><a href="#form" class="hover:text-white transition-colors">商務宴飲策劃</a></li>
+            <li><a href="#form" class="hover:text-white transition-colors">精品品牌發布</a></li>
+            <li><a href="#form" class="hover:text-white transition-colors">VIP 私人晚宴</a></li>
+            <li><a href="#form" class="hover:text-white transition-colors">空間美學工程</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold tracking-[0.3em] mb-6 uppercase text-white/90">聯繫資訊</h4>
+          <ul class="space-y-4 text-sm text-white/60 font-light leading-relaxed">
+            <li class="flex items-center gap-3">
+              <i class="fa fa-phone w-4"></i>
+              <a href="tel:+886228832113" class="hover:text-white transition-colors">(02) 2883-2113</a>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fa fa-envelope w-4"></i>
+              <a href="mailto:muzentsao@muzentsao.com" class="hover:text-white transition-colors">muzentsao@muzentsao.com</a>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fa fa-map-marker w-4"></i>
+              <a href="https://maps.google.com/?q=%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A3%AB%E6%9E%97%E5%8D%80%E5%BE%8C%E6%B8%AF%E8%A1%97185%E8%99%9F4%E6%A8%93" target="_blank" rel="noopener" class="hover:text-white transition-colors">
+                台北市士林區後港街185號4樓
+              </a>
+            </li>
+          </ul>
+
+          <div class="mt-8 flex space-x-4">
+            <a href="https://www.facebook.com/muzentsao/?locale=zh_TW" target="_blank" rel="noopener"
+               class="w-9 h-9 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors"
+               aria-label="Facebook">
+              <i class="fa fa-facebook text-sm"></i>
+            </a>
+            <a href="https://www.instagram.com/muzentsaocatering/" target="_blank" rel="noopener"
+               class="w-9 h-9 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors"
+               aria-label="Instagram">
+              <i class="fa fa-instagram text-sm"></i>
+            </a>
+            <a href="https://lin.ee/GDoyPqd"
+               onclick="try{window.location='line://ti/p/@muzentsao'; setTimeout(function(){window.open('https://lin.ee/GDoyPqd','_blank');},700);}catch(e){}"
+               target="_blank" rel="noopener"
+               class="w-9 h-9 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors"
+               aria-label="LINE">
+              <i class="fa fa-comment text-sm"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="text-[10px] text-white/40 tracking-[0.4em] uppercase">
+          © MU ZEN TSAO 2026｜Catering Aesthetic Design
+        </div>
+        <div class="flex gap-8 text-[10px] text-white/40 tracking-[0.3em] uppercase">
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition-colors">Cookie Settings</a>
+        </div>
       </div>
     </div>
   </footer>
 
   <script>
+    // 保留原始 JS 控制邏輯
     const params = new URLSearchParams(location.search);
     ["utm_source","utm_medium","utm_campaign"].forEach(k=>{
       const el = document.getElementById(k);
