@@ -33,7 +33,6 @@
     .soft-shadow{ box-shadow: 0 10px 40px rgba(0,0,0,0.03); }
     .ringline{ outline: 1px solid rgba(139,0,0,0.1); outline-offset: 0; }
     
-    /* 移除複雜漸層，改為極簡石色呼吸感 */
     .grad {
       background: #FFFFFF;
     }
@@ -61,6 +60,12 @@
     .img-slot { position: relative; overflow: hidden; background: #FAFAF9; border-radius: 2rem; }
     .img-slot img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1); }
     .img-slot:hover img { transform: scale(1.03); }
+
+    /* 局部光影技術 (Scrim)：確保文字閱讀性而不影響整體色調 */
+    .img-scrim {
+      background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 40%, transparent 100%);
+      pointer-events: none;
+    }
 
     h1, h2 { line-height: 1.4 !important; font-weight: 500; }
   </style>
@@ -140,9 +145,12 @@
           <div class="bg-white soft-shadow rounded-[3.5rem] p-3 h-full overflow-hidden">
               <div class="img-slot w-full h-[500px] md:h-full min-h-[650px]">
                 <img src="S__59924488_0.jpg" alt="hero" />
-                <div class="absolute bottom-12 left-12 right-12">
-                   <div class="text-[7px] text-[#8B0000] uppercase tracking-[0.6em] font-bold mb-4">ATMOSPHERE</div>
-                   <div class="text-lg font-light text-stone-900 tracking-[0.3em]">感官場域執演</div>
+                
+                <div class="absolute inset-0 img-scrim"></div>
+                
+                <div class="absolute bottom-12 left-12 right-12 z-10">
+                   <div class="text-[8px] text-white/90 uppercase tracking-[0.6em] font-bold mb-4">ATMOSPHERE</div>
+                   <div class="text-xl font-medium text-white tracking-[0.3em] drop-shadow-sm">感官場域執演</div>
                 </div>
               </div>
           </div>
@@ -241,8 +249,7 @@
           <button onclick="location.href='#form'" class="absolute inset-0 w-full h-full opacity-0">洽詢風格</button>
         </div>
       </div>
-      </section>
-
+    </section>
     <section id="faq" class="mx-auto max-w-6xl px-4 py-24">
       <div class="bg-white rounded-[4rem] p-12 md:p-20 border border-stone-100 soft-shadow">
         <h2 class="text-2xl font-light mb-20 text-center text-stone-900 tracking-[0.4em]">預約須知</h2>
@@ -385,7 +392,6 @@
   </footer>
 
   <script>
-    // JS 邏輯完全保留
     const params = new URLSearchParams(location.search);
     ["utm_source","utm_medium","utm_campaign"].forEach(k=>{
       const el = document.getElementById(k);
