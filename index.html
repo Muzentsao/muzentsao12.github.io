@@ -467,45 +467,39 @@
   </div>
 
   <script>
-    // 1. UTM 參數自動填充邏輯 (保留原功能)
+    // 1. UTM 參數自動填充邏輯
     const params = new URLSearchParams(location.search);
     ["utm_source","utm_medium","utm_campaign"].forEach(k=>{
       const el = document.getElementById(k);
       if (el) el.value = params.get(k) || "";
     });
 
-    // 2. 表單提交邏輯串接
-    const GAS_URL = "[https://script.google.com/macros/s/AKfycbzLzQ0ZGkeVzgnJop_hazUhmQfTLno061GZOVrPvUl--MXRzy6-vQTb8gN1oZBL0hHO/exec]"; 
+    // 2. 表單提交邏輯串接 (修正網址語法並優化傳送邏輯)
+    const GAS_URL = "https://script.google.com/macros/s/AKfycbzLzQ0ZGkeVzgnJop_hazUhmQfTLno061GZOVrPvUl--MXRzy6-vQTb8gN1oZBL0hHO/exec"; 
     const form = document.getElementById("inquiryForm");
     const btn = document.getElementById("submitBtn");
-    const msg = document.getElementById("formMsg");
 
     form.addEventListener("submit", async (e) => {
-      // 阻斷預設跳轉行為
       e.preventDefault();
 
-      // 防止重複送出
       btn.disabled = true;
       const originalBtnText = btn.textContent;
       btn.textContent = "傳送需求中...";
 
-      // 使用 FormData 抓取表單資料
+      // 使用 FormData 直接封裝，確保 GAS 能透過 e.parameter 讀取
       const formData = new FormData(form);
 
       try {
-        // 發送資料至 Google Apps Script
-        const response = await fetch(GAS_URL, {
+        // 使用 fetch 傳送 POST 請求
+        await fetch(GAS_URL, {
           method: "POST",
-          body: formData
+          body: formData,
+          mode: 'no-cors' // 解決 GAS 常見的跨網域重導向問題
         });
 
-        // 狀態回饋邏輯
+        // 彈出成功回饋
         alert("成功");
-        
-        // 清空表單
         form.reset();
-        
-        // 回復按鈕狀態
         btn.textContent = originalBtnText;
 
       } catch (err) {
@@ -519,4 +513,3 @@
   </script>
   </body>
 </html>
-
