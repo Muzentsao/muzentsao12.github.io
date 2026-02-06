@@ -523,7 +523,14 @@
         btn.disabled = false;
       }
     });
+
+    // 強制頁面載入時回到頂端，並防止瀏覽器記住捲動位置
+    window.addEventListener('load', () => {
+      if (!window.location.hash || window.location.hash === '#top') {
+        history.scrollRestoration = 'manual';
+        window.scrollTo(0, 0);
+      }
+    });
   </script>
   </body>
 </html>
-
